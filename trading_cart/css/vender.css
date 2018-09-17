@@ -1,0 +1,45 @@
+/*------------------ VENDER.CSS ----------------*/
+#sell-title{
+	background: #D6D6D6;
+	color: #4F4D4D;
+	padding: 20px;
+}
+
+#publicacion-container .titular .col-12{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#publicacion-container #descripcion textarea{
+	min-height: 60px;
+	max-height: 100px;
+}
+
+#publicacion-container #lista-img div.img-box{
+	min-width: 100px;
+	max-width: 100px;
+	min-height: 100px;
+	max-height: 100px;
+	border-radius: 5px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+
+#publicacion-container #lista-img div.img-box img{
+	width: 100%;
+}
+
+#publicacion-container #lista-img li input[type=file],
+#publicacion-container #lista-video li input[type=file]{
+	border: 1px solid black;
+	background: #000;
+}
+
+#publicacion-container #lista-video li div.video{
+	min-width: 250px;
+	max-width: 250px;
+	min-height: 100px;
+	max-height: 100px;
+	margin-bottom: 50px;
+}

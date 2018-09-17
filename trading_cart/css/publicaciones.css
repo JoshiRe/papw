@@ -1,0 +1,96 @@
+#publicaciones p.h3{
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+/*---------- MODAL DELETE POST -------------*/
+#modal-deletePost .modal-content{
+	background: #fff;
+}
+
+#modal-deletePost .modal-header{
+	background: #D30812;
+	color: #fff;
+}
+
+#modal-deletePost .modal-body{
+	background: #EC3426;
+}
+
+#modal-deletePost .modal-body p.h4{
+	color: #fff;
+}
+
+#modal-deletePost .modal-body small{
+	color: #CDCDCD;
+}
+
+#modal-deletePost .modal-body .btn-danger,
+#modal-deletePost .modal-body .btn-default{
+	box-shadow: 0 0px 10px 1px #D0D0D0;
+}
+
+#modal-deletePost .modal-body .btn-danger:hover,
+#modal-deletePost .modal-body .btn-default:hover{
+	box-shadow: 0 0px 10px 1px #000000;
+}
+
+/*---------- MODAL DISABLE POST -------------*/
+#modal-disablePost .modal-content{
+	background: #fff;
+}
+
+#modal-disablePost .modal-header{
+	background: #DCA600;
+	color: #000;
+}
+
+#modal-disablePost .modal-body{
+	background: #FFD248;
+}
+
+#modal-disablePost .modal-body p.h4{
+	color: #000;
+}
+
+#modal-disablePost .modal-body small{
+	color: #666666;
+}
+
+#modal-disablePost .modal-body .btn-warning,
+#modal-disablePost .modal-body .btn-default{
+	box-shadow: 0 0px 10px 1px #484747;
+}
+
+#modal-disablePost .modal-body .btn-warning:hover,
+#modal-disablePost .modal-body .btn-default:hover{
+	box-shadow: 0 0px 10px 1px #000000;
+}
+
+/*-------------- TABlA -----*/
+#publicaciones-tabla{
+	margin-top: 5px;
+}
+
+#publicaciones-tabla th{
+	border-top: 0;
+}
+
+#publicaciones-tabla td{
+	text-align: center;
+}
+
+#publicaciones-tabla td[data-status="active"]{
+	color: #47E847;
+	font-size: 35px;
+}
+
+#publicaciones-tabla td[data-status="pending"]{
+	color: #DCBC09;
+	font-size: 35px;
+}
+
+#publicaciones-tabla td[data-status="down"]{
+	color: #E00010;
+	font-size: 35px;
+}

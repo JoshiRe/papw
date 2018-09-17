@@ -1,0 +1,468 @@
+:root{
+	--measure-1: 50px;
+	--measure-2: 25px;
+}
+
+.criterion-items-container{
+	--scale: 3;
+	--card-width: 650px;
+	--card-height: 948px;
+	--card-item-w: 560px;
+	--card-header-h: 150px;
+	--card-rankBox-h: 50px;
+	--card-rank-size: 37.5px;
+	--card-img-width: 520px;
+	--card-img-height: 515px;
+	--card-desc-height: 197px;
+	--measure-6: 6px;
+	--measure-7hf: 7.5px;
+	--measure-12: 12px;
+	--measure-15: 15px;
+	--measure-150: 150px;
+	--title-sz: 300%;
+	--ms-prop-150: 150%;
+}
+
+body{
+	background: #F5F5F5;
+}
+
+/*
+.row{
+	border: 1px solid black;
+}
+
+.row div[class^="col"]{
+	border: 1px solid white;
+}*/
+
+/*--------------- HEADER ---------------------*/
+header{
+	/*background: #4256f4;*/
+	background: #75340D;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+header .foto{
+	background: #fff;
+	max-width: var(--measure-1);	
+	max-height: var(--measure-1);	
+	min-height: var(--measure-1);
+	border-radius: 100px;
+	overflow: hidden;
+}
+
+header .foto img{
+	width: 100%;
+}
+
+/*-- BOTONES NAVEGACION --*/
+header form button{
+	background: red;
+}
+
+/*-- Botón de Log In --*/
+header .btn-login-img-container {
+	background: #fff;
+	max-width: var(--measure-2);	
+	max-height: var(--measure-2);	
+	min-height: var(--measure-2);
+	border-radius: 100px;
+	overflow: hidden;
+}
+
+header .btn-login img{
+	width: 100%;
+}
+
+header .btn-login-header{
+	padding-top: 2px;
+}
+
+header .btn-login a{
+	text-decoration: none;
+	color: #FFB64D;
+	font-weight: 600;
+}
+
+header .btn-login-link{
+	padding-bottom: 2px;
+}
+
+header .btn-login{
+	background: #75340D;
+	/*border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;*/	
+	border-radius: 5px 0 0 5px;
+	padding-bottom: 3px;
+	cursor: pointer;
+}
+
+header .btn-login:hover{
+	background: #381805;
+	/*border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;	*/
+	border-radius: 5px 0 0 5px;
+	padding-bottom: 3px;
+	cursor: pointer;
+}
+
+header .btn-login:active{
+	background: white;
+	color: #FFB64D;
+	/*border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;	*/
+	border-radius: 5px 0 0 5px;
+	padding-bottom: 3px;
+	cursor: pointer;
+}
+
+/*-- Botón de carrito --*/
+header .btn-cart{
+	background: #75340D;
+	color: #FFB64D;
+	/*border-top: 2px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;*/
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+}
+
+header .btn-cart:hover{
+	background: #381805;
+	color: #FFB64D;
+	/*border-top: 2px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;*/
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+}
+
+header .btn-cart:active{
+	background: white;
+	color: #FFB64D;
+	/*border-top: 2px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;*/
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+}
+
+/*--------------- MODAL DEL LOGIN ---------------------*/
+main .modal-header .modal-title{
+	font-family: 'Baloo Tammudu', sans-serif;
+}
+
+main .modal-content{
+	background: #82b191;
+}
+
+main .modal-header, main .modal-footer{
+	background: #82b191;
+	color: #000;
+}
+
+main .modal-body, main .modal-body form input{
+	background: #036d63;
+}
+
+main .modal-body form input::placeholder, main .modal-body form input{
+	color: rgba(255,255,255,.3);
+}
+
+main .modal-body form a{
+	color: #041624;
+	font-weight: 600;
+}
+
+main .modal-body form a:hover{
+	color: #D6DCE0;
+}
+
+main .modal-body form a:active{
+	color: #727272;
+}
+
+main .modal-body form label{
+	color: #82b191;
+	font-weight: 600;
+}
+
+main .modal-body form small{
+	color: #62866D;
+}
+
+/*--------------- MAIN ---------------------*/
+main .criterion-item a{
+	text-decoration: none;
+	color: black;
+}
+
+main .criterion-item .product-container:hover{
+	box-shadow: 0px 0px 10px 1px #5B80F8;
+}
+
+main .criterion-items-container{
+	display: flex;
+	justify-content: space-around;
+}
+
+/*----- Carta -----*/
+main .criterion-item .product-container{
+	border-width: calc(var(--measure-15) / var(--scale));
+	border-style: solid;
+	background: #b0873d;
+	min-width: calc(var(--card-width) / var(--scale));/*433.33px;*/
+	max-width: calc(var(--card-width) / var(--scale));/*433.33px;*/
+	min-height: calc(var(--card-height) / var(--scale));/*632px;*/
+	max-height: calc(var(--card-height) / var(--scale));/*632px;*/
+	border-radius: calc(var(--measure-12) / var(--scale));
+	overflow: hidden;
+}
+
+main .criterion-item .product-item{
+	display: block;
+	width: 100%;
+}
+
+main .criterion-item .product-name{
+	border-width: calc(var(--measure-6) / var(--scale));
+	border-style: outset;
+	border-color: #DCB773;
+	font-family: 'Baloo Tammudu', sans-serif;
+	min-width: calc(var(--card-item-w) / var(--scale));/*373.33px;*/
+	min-height: calc(var(--card-header-h) / var(--scale));/*53.33px;*/
+	max-height: calc(var(--card-header-h) / var(--scale));/*53.33px;*/
+	margin-top: calc(var(--measure-15) / var(--scale));
+	margin-left: calc(var(--measure-15) / var(--scale));
+	margin-right: calc(var(--measure-15) / var(--scale));
+	text-overflow: initial;
+	overflow: auto;
+}
+
+main .criterion-item .product-name p{
+	padding-top: calc(var(--measure-7hf) / var(--scale));
+	padding-left: calc(var(--measure-7hf) / var(--scale));
+	font-size: calc(var(--title-sz) / var(--scale));
+}
+
+main .criterion-item .product-avg-container{
+	/*border: 1px solid black;*/
+	min-width: calc(var(--card-item-w) / var(--scale));/*373.33px;*/
+	min-height: calc(var(--card-rankBox-h) / var(--scale));/*33.33px;*/
+	max-height: calc(var(--card-rankBox-h) / var(--scale));/*33.33px;*/
+	margin-top: calc(var(--measure-15) / var(--scale));
+	margin-left: calc(var(--measure-15) / var(--scale));
+	margin-right: calc(var(--measure-15) / var(--scale));
+}
+
+main .criterion-item .product-avg-rank{
+	background: linear-gradient(to top right, red, #540B0B 100%);
+	border-radius: 100px;
+	margin-left: calc(var(--measure-7hf) / var(--scale));
+	max-width: calc(var(--card-rank-size) / var(--scale));/*25px;*/
+	min-width: calc(var(--card-rank-size) / var(--scale));/*25px;*/
+	min-height: calc(var(--card-rank-size) / var(--scale));/*25px;*/
+	max-height: calc(var(--card-rank-size) / var(--scale));/*25px;*/
+}
+
+main .criterion-item .product-avg-rank i{
+  	background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, yellow), color-stop(0.7, #540B0B));
+  	background-image: linear-gradient(to top right, yellow, #540B0B 100%);
+  	color: transparent;
+  	-webkit-background-clip: text;
+  	background-clip: text;
+  	font-size: calc(var(--ms-prop-150) / var(--scale));
+}
+
+main .criterion-item .rank-muted{
+	background: linear-gradient(to top right, #BFBFBF, #4E4E4E 100%);
+}
+
+main .criterion-item .rank-muted i{
+	color: #595959;
+}
+
+main .criterion-item .product-img-container{
+	border-width: calc(var(--measure-7hf) / var(--scale));
+	border-style: outset;
+	border-color: #C7C7C7;
+	background: rgba(255, 255, 255, 0.3);
+	min-width: calc(var(--card-img-width) / var(--scale));/*346.66px;*/
+	min-height: calc(var(--card-img-height) / var(--scale));/*343.33px;*/
+	max-height: calc(var(--card-img-height) / var(--scale));/*343.33px;*/
+	margin-top: calc(var(--measure-15) / var(--scale));
+	margin-left: calc(var(--measure-15) / var(--scale));
+	margin-right: calc(var(--measure-15) / var(--scale));
+	overflow: hidden;
+}
+
+main .criterion-item .product-img-container img{
+	width: 100%;
+}
+
+main .criterion-item .product-description{
+	border-width: calc(var(--measure-6) / var(--scale));
+	border-style: solid;
+	border-color: #AC2610;
+	/*background: #b9b9b9;*/
+	background: rgba(255, 255, 255, .6);
+	min-width: calc(var(--card-item-w) / var(--scale));/*373.33px;*/
+	min-height: calc(var(--card-desc-height) / var(--scale));/*131.33px;*/
+	max-height: calc(var(--card-desc-height) / var(--scale));/*131.33px;*/
+	margin-top: calc(var(--measure-15) / var(--scale));
+	margin-left: calc(var(--measure-15) / var(--scale));
+	margin-right: calc(var(--measure-15) / var(--scale));
+	padding-left: calc(var(--measure-15) / var(--scale));
+	overflow: auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main .criterion-item .product-description p{
+	font-size: calc(var(--ms-prop-150) / var(--scale));
+}
+
+main .criterion-item .product-description i{
+	display: inline;
+}
+
+main .criterion-item .product-description .icon{
+	background: green;
+	color: #B0FB7E;
+	border: 2px solid green;
+	display: block;
+	font-size: 30px;
+	padding: 3px;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 5px 0 0 5px;
+}
+
+main .criterion-item .product-description .price{
+	background: #51B25C;
+	color: #fff;
+	border: 2px solid green;
+	display: block;
+	font-size: 25px;
+	padding: 7px;
+	border-radius: 0 5px 5px 0;
+}
+
+/*--------------------------------------------- Variantes de cartas */
+main div[data-criterion-no="0"] .criterion-item .product-container{
+	background: #7b37b2;
+}
+
+main div[data-criterion-no="0"] .criterion-item .product-name{
+	color: #fff;
+}
+
+main div[data-criterion-no="1"] .criterion-item .product-container{
+	background: #089689;
+}
+
+/*------------------------------------ Filas de criterios */
+main .criterion-items-container{
+	background: rgba(255, 255, 255, 0.2);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 0 0 5px 5px;
+}
+
+main .criterion-items-container{
+	background: linear-gradient(to right, #F5F5F5,#C4C4C4, #F5F5F5);
+	box-shadow: 0px 3px 5px 0px #7C7C7C;
+	animation: animaBack 10s ease infinite;
+	-webkit-animation: animaBack 10s ease infinite;
+	-moz-animation: animaBack 10s ease infinite;
+
+	background-size: 200% 200%;
+}
+
+@keyframes animaBack{
+	0%{background-position: 0% 50%}
+	50%{background-position: 100% 50%}
+	100%{background-position: 0% 50%}
+}
+
+@-webkit-keyframes animaBack{
+	0%{background-position: 0% 50%}
+	50%{background-position: 100% 50%}
+	100%{background-position: 0% 50%}
+}
+
+@-moz-keyframes animaBack{
+	0%{background-position: 0% 50%}
+	50%{background-position: 100% 50%}
+	100%{background-position: 0% 50%}
+}
+
+main div[data-criterion-no]{
+	margin-bottom: 20px;
+}
+
+main div[data-criterion-no="0"]{
+	margin-top: 10px;
+}
+
+main div[data-criterion-no] .criterion-title{
+	background: linear-gradient(to right, #7b37b2,  rgba(123, 55, 178, 0));
+	background: -webkit-linear-gradient(to right, #7b37b2,  rgba(123, 55, 178, 0));
+	background: -moz-linear-gradient(to right, #7b37b2,  rgba(123, 55, 178, 0));
+	color: #fff;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-family: 'Racing Sans One', sans-serif;
+}
+
+main div[data-criterion-no] .criterion-title h2{
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+/*--------------- DROPDOWN CART ---------------------------*/
+header #nav-menu i.dropdown-toggle::after{
+	display: none;
+}
+
+header #nav-menu .dp-cart .row{
+	background: #E9E9E9;
+}
+
+header #nav-menu table th{
+	text-align: center;
+	color: #fff;
+}
+
+header #nav-menu table td{
+	text-align: center;
+	color: #000;
+}
+
+header #nav-menu table td a{
+	color: #000;
+}
+
+header #nav-menu table td.td-subtotal{
+	color: green;
+}
+
+header #nav-menu table tr.tr-total{
+	background: #B6F89C;
+}
+
+header #nav-menu table tr.tr-total td.td-total-label{
+	font-weight: 600;
+}
+
+header #nav-menu table tr.tr-total td.td-total{
+	font-weight: 700;
+	color: green;
+}

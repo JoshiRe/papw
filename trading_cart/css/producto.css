@@ -1,0 +1,341 @@
+:root{
+	--scale: 1.5;
+	--card-width: 650px;
+	--card-height: 948px;
+	--card-item-w: 560px;
+	--card-header-h: 80px;
+	--card-rankBox-h: 50px;
+	--card-rank-size: 37.5px;
+	--card-img-width: 520px;
+	--card-img-height: 515px;
+	--card-desc-height: 197px;
+}
+
+/*----------------- COLUMNA DE IMÁGENES ---------------------------*/
+main .img-column-container{
+	border-radius: 5px;
+	overflow: auto;
+	min-height: calc(var(--card-height) / var(--scale));
+	max-height: calc(var(--card-height) / var(--scale));
+}
+
+/*----------------- DISPLAY DEL PRODUCTO ---------------------------*/
+main .product-container{
+	border-width: 10px;
+	border-style: solid;
+	background: #b0873d;
+	min-width: calc(var(--card-width) / var(--scale));/*433.33px;*/
+	max-width: calc(var(--card-width) / var(--scale));/*433.33px;*/
+	min-height: calc(var(--card-height) / var(--scale));/*632px;*/
+	max-height: calc(var(--card-height) / var(--scale));/*632px;*/
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+main .product-item{
+	display: block;
+	width: 100%;
+}
+
+main .product-name{
+	border-width: 4px;
+	border-style: outset;
+	border-color: #DCB773;
+	min-width: calc(var(--card-item-w) / var(--scale));/*373.33px;*/
+	min-height: calc(var(--card-header-h) / var(--scale));/*53.33px;*/
+	max-height: calc(var(--card-header-h) / var(--scale));/*53.33px;*/
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-overflow: initial;
+	overflow: auto;
+}
+
+main .product-name p{
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+main .product-avg-container{
+	/*border: 1px solid black;*/
+	min-width: calc(var(--card-item-w) / var(--scale));/*373.33px;*/
+	min-height: calc(var(--card-rankBox-h) / var(--scale));/*33.33px;*/
+	max-height: calc(var(--card-rankBox-h) / var(--scale));/*33.33px;*/
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+main .product-avg-rank{
+	background: linear-gradient(to top right, red, #540B0B 100%);
+	border-radius: 100px;
+	margin-left: 5px;
+	max-width: calc(var(--card-rank-size) / var(--scale));/*25px;*/
+	min-width: calc(var(--card-rank-size) / var(--scale));/*25px;*/
+	min-height: calc(var(--card-rank-size) / var(--scale));/*25px;*/
+	max-height: calc(var(--card-rank-size) / var(--scale));/*25px;*/
+}
+
+main .product-avg-rank i{
+  	background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, yellow), color-stop(0.7, #540B0B));
+  	background-image: linear-gradient(to top right, yellow, #540B0B 100%);
+  	color: transparent;
+  	-webkit-background-clip: text;
+  	background-clip: text;
+}
+
+main .rank-muted{
+	background: linear-gradient(to top right, #BFBFBF, #4E4E4E 100%);
+}
+
+main .rank-muted i{
+	color: #595959;
+}
+
+main .product-img-container{
+	border-width: 5px;
+	border-style: outset;
+	border-color: #C7C7C7;
+	background: rgba(255, 255, 255, 0.3);
+	min-width: calc(var(--card-img-width) / var(--scale));/*346.66px;*/
+	min-height: calc(var(--card-img-height) / var(--scale));/*343.33px;*/
+	max-height: calc(var(--card-img-height) / var(--scale));/*343.33px;*/
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	overflow: hidden;
+}
+
+main .product-img-container img{
+	width: 100%;
+}
+
+main .product-description{
+	border-width: 4px;
+	border-style: solid;
+	border-color: #AC2610;
+	background: #B9B9B9;
+	min-width: calc(var(--card-item-w) / var(--scale));/*373.33px;*/
+	min-height: calc(var(--card-desc-height) / var(--scale));/*131.33px;*/
+	max-height: calc(var(--card-desc-height) / var(--scale));/*131.33px;*/
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-left: 10px;
+	overflow: auto;
+}
+
+/*----------------- INFORMACIÓN DEL PRODUCTO ---------------------------*/
+main .info-price input{
+	color: green;
+	font-weight: 600;
+	font-size: 50px;
+	height: 70px;
+}
+
+main .info-row{
+	min-height: 50px;
+	max-height: 75px;
+	margin-bottom: 15px;
+}
+
+main .info-row .info-box-prepend, main .info-innerBox-prepend{
+	border-radius: 5px 0 0 5px;
+	background: #23BA00;
+	color: #fff;
+	font-size: 30px;
+
+	min-height: 75px;
+	display: flex;
+	align-items: center;
+}
+
+main .info-row .info-box-prepend i, main .info-innerBox-prepend i{
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+main .info-row .info-box-append{
+	border-radius: 0 5px 5px 0;
+	background: #D0D0D0;
+	border: 2px solid #23BA00;
+	font-size: 30px;
+	font-weight: 700;
+
+	display: flex;
+	align-items: center;
+}
+
+main .info-row .info-box-append .info-price{
+	display: block;
+	margin: 0;
+	width: 100%;
+}
+
+/* Botones de información override */
+main .info-row .info-innerBox-prepend{
+	background: #20262E;
+}
+
+main .info-row .info-button-append{
+	border-radius: 0 5px 5px 0;
+	border: 5px solid #20262E;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: left;
+}
+
+/*----------------- VENTANAS MODALES ---------------------------*/
+main #modal-pagos .modal-header .modal-title,
+main #modal-detalles .modal-header .modal-title,
+main #modal-vendedor .modal-header .modal-title{
+	font-family: 'Baloo Tammudu', sans-serif;
+	color: #EDE0F2;
+}
+
+main #modal-pagos .modal-header,
+main #modal-pagos .modal-footer,
+main #modal-detalles .modal-header,
+main #modal-detalles .modal-footer,
+main #modal-vendedor .modal-header,
+main #modal-vendedor .modal-footer{
+	background: #a777c4;
+	color: #000;
+}
+
+main #modal-pagos .modal-body,
+main #modal-pagos .modal-body form input,
+main #modal-detalles .modal-body,
+main #modal-vendedor .modal-body{
+	background: #7b37b2;
+}
+
+main #modal-pagos h3,
+main #modal-detalles h3,
+main #modal-vendedor h3{
+	font-family: 'Baloo Tammudu', sans-serif;
+	margin-bottom: 0;
+	color: #d2b6de;
+}
+
+/*----------------- MODAL MEDIOS DE PAGO ---------------------------*/
+main #modal-pagos .modal-body form input::placeholder, 
+main #modal-pagos .modal-body form input{
+	color: rgba(255,255,255,.3);
+}
+
+main #modal-pagos .modal-content{
+	background: #a777c4;
+}
+
+main #modal-pagos .modal-body form a{
+	color: #041624;
+	font-weight: 600;
+}
+
+main #modal-pagos .modal-body form a:hover{
+	color: #D6DCE0;
+}
+
+main #modal-pagos .modal-body form a:active{
+	color: #727272;
+}
+
+main #modal-pagos .modal-body form label{
+	color: #a777c4;
+	font-weight: 600;
+}
+
+main #modal-pagos .modal-body form small{
+	color: #d2b6de;
+}
+
+main #modal-pagos .credito,
+main #modal-pagos .debito,
+main #modal-pagos .deposito{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+main #modal-pagos .credito i, 
+main #modal-pagos .debito i{
+	color: #d2b6de;
+	font-size: 30px;
+	margin-right: 10px;
+}
+
+main #modal-pagos .deposito img{
+	background: #d2b6de;
+	margin-right: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	border-radius: 4px;
+}
+
+/*----------------- MODAL DETALLES DEL PRODUCTO ---------------------------*/
+main #modal-detalles .modal-body p{
+	color: #fff;
+	background: #BD75DC;
+	padding-top: 5px;
+	padding-left: 25px;
+	padding-bottom: 10px;
+	border-radius: 0 0 25px 25px;
+}
+
+main #modal-detalles .modal-body p[class="h5"]{
+	background: #d2b6de;
+	color: #7b37b2;
+	padding: 3px;
+	padding-left: 15px;
+	margin-bottom: 0;
+	border-radius: 25px 25px 0 0;
+	font-weight: 600;
+}
+
+/*----------------- MODAL DATOS DEL VENDEDOR ---------------------------*/
+main #modal-vendedor .modal-vendedor-nick .nick-box-container .icon,
+main #modal-vendedor .modal-vendedor-avg .avg-box-container .icon,
+main #modal-vendedor .modal-vendedor-loc .loc-box-container .icon{
+	color: #7b37b2;
+	background: #d2b6de;
+	padding: 15px;
+	display: block;
+	border-radius: 10px 0 0 10px;
+}
+
+main #modal-vendedor .modal-vendedor-nick .nick-box-container .nick,
+main #modal-vendedor .modal-vendedor-avg .avg-box-container .stars,
+main #modal-vendedor .modal-vendedor-loc .loc-box-container .location{
+	background: #BD75DC;
+	padding: 15px;
+	padding-left: 50px;
+	display: block;
+	border-radius: 0 10px 10px 0;
+}
+
+main #modal-vendedor .modal-vendedor-loc .loc-box-container .location{
+	color: #fff;
+}
+
+main #modal-vendedor .modal-vendedor-avg .avg-box-container .stars{
+	padding-left: 10px;
+}
+
+main #modal-vendedor .modal-vendedor-nick .nick-box-container .nick a,
+main #modal-vendedor .modal-vendedor-avg .avg-box-container .stars i{
+	color: #fff;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+main #modal-vendedor .modal-vendedor-nick .nick-box-container,
+main #modal-vendedor .modal-vendedor-avg .avg-box-container{
+	display: flex;
+	justify-content: start;
+}
+
+main #modal-vendedor .modal-vendedor-loc .loc-box-container{
+	display: flex;
+	justify-content: center;
+}

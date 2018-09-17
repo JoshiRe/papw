@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Trading cart</title>
+
+		<!-- META INFO-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		<!-- PLUG-IN -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+
+		<!-- FUENTES -->
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+
+		<!-- ESTILOS -->
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<link rel="stylesheet" type="text/css" href="css/vender.css">
+
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="row justify-content-between">
+					<!-- LOGO -->
+					<div class="col-1 d-flex justify-content-center">
+						<a href="index.html">
+							<div class="foto d-flex align-items-center justify-content-center">			
+								<img src="img/logo1.png">
+							</div>
+						</a>
+					</div>
+
+					<!-- BUSQUEDA -->
+					<div class="col-6 d-flex align-items-center justify-content-center p-0">
+						<form class="form-row w-100">
+							<div class="col-12">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<select class="custom-select  btn btn-warning bg-warning">
+											<option selected>Todo</option>
+											<option disabled="">--Monstruos--</option>
+											<option value="0">Mn. Todo</option>
+											<option value="1">Normales</option>
+											<option value="2">Efecto</option>
+											<option value="3">Fusión</option>
+											<option value="4">Ritual</option>
+											<option value="5">XYZ</option>
+											<option value="6">Synchro</option>
+											<option value="7">Péndulo</option>
+											<option value="8">Link</option>
+											<option disabled="">--Magia--</option>
+											<option value="9">Mg. Todo</option>
+											<option value="10">Mg. Normal</option>
+											<option value="11">Mg. Rápido</option>
+											<option value="12">Mg. Continua</option>
+											<option value="13">Mg. Campo</option>
+											<option value="14">Mg. Equipo</option>
+											<option value="15">Mg. Ritual</option>
+											<option disabled="">--Trampa--</option>
+											<option value="16">T. Todo</option>
+											<option value="17">T. Normal</option>
+											<option value="18">T. Continua</option>
+											<option value="19">T. Counter</option>
+											<option disabled="">--Otros--</option>
+											<option value="20">Sobres/Cajas</option>
+											<option value="21">Decks</option>
+											<option value="22">Tableros</option>
+											<option value="23">Estuches</option>
+										</select>
+									</div>
+									<input type="text" name="" placeholder="Buscar..." class="form-control">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+									</div>
+								</div>
+							</div>
+						</form>					
+					</div>
+
+					<!-- NAVEGACIÓN -->
+					<nav class="col-3" id="nav-menu">
+						<div class="row h-100">
+							<div class="col-6 p-0 d-flex justify-content-center btn-login" data-toggle="modal" data-target="#modal-login">
+								<!-- Contenido del botón Log In -->
+								<div class="row flex-column w-100 btn-login-body">
+									<div class="col d-flex justify-content-center btn-login-header">
+										<div class="btn-login-img-container d-flex align-items-center">
+											<img src="img/user1.jpg">
+										</div>
+									</div>
+									<div class="col d-flex justify-content-center btn-login-link">
+										<a href="#">Log In</a>
+									</div>
+								</div>
+								<!------ Carrito -------------->
+							</div>
+							<div class="col-6 d-flex align-items-center justify-content-center btn-cart">
+								<div class="dropdown dp-cart">
+									<i class="fas fa-shopping-cart fa-2x dropdown-toggle" id="dp-cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+									<div class="row dropdown-menu dropdown-menu-right px-2" aria-labelledby="dp-cart">
+										
+										<div class="col">
+											<table class="table table-bordered table-striped">
+												<thead class="thead-dark">
+												<tr>
+													<th scope="col"></th>
+													<th scope="col" colspan="2">Producto</th>
+													<th scope="col">Unidades</th>
+													<th scope="col">$</th>
+													<th scope="col">Eliminar</th>
+												</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr class="tr-total">
+														<td class="td-total-label">Total</td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td class="td-total">3000.00</td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="col">
+											<button class="btn btn-outline-success btn-block">Gestionar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</nav>
+
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12" id="sell-title">
+						<p class="h1"><i class="fas fa-money-check-alt"></i>
+						Crear publicación</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" id="publicacion-container">
+				<form action="">
+
+					<!-- Título, descripción y detalles -->
+					<div class="row titular">
+						<div class="col-12 table-secondary">
+							<h2>Título, descripción y detalles</h2>
+						</div>
+					</div>
+					<div class="row mt-2 contenido">
+						<!-- Título y descripción -->
+						<div class="col-6">
+							<!---->
+							<div class="row form-group no-gutters" id="titulo">
+								<div class="col-4">
+									Título
+								</div>
+								<div class="col-8">
+									<input type="text" name="" maxlength="64" class="form-control">
+								</div>
+							</div>
+
+							<div class="form-row form-group" id="descripcion">
+								<div class="col-4">
+									Descripción
+								</div>
+								<div class="col-8">
+									<textarea maxlength="256" class="form-control" placeholder="..."></textarea>
+								</div>
+							</div>
+							<!---->
+						</div>
+
+						<!-- Detalles del producto -->
+						<div class="col-6">
+							<!--Estado-->
+							<div class="row form-group no-gutters">
+								<div class="col-2">
+									Estado
+								</div>
+								<div class="col-3 mr-4">
+									<select class="custom-select">
+										<option value="1">Nuevo</option>
+										<option value="2">Seminuevo</option>
+										<option value="3">Usado</option>
+									</select>
+								</div>
+							<!--Categoría-->
+								<div class="col-2">
+									Categoría
+								</div>
+								<div class="col-3">
+									<select class="custom-select">
+										<optgroup label="--Monstruos--">
+											<option value="1">Normales</option>
+											<option value="2">Efecto</option>
+											<option value="3">Fusión</option>
+											<option value="4">Ritual</option>
+											<option value="5">XYZ</option>
+											<option value="6">Synchro</option>
+											<option value="7">Péndulo</option>
+											<option value="8">Link</option>
+										</optgroup>
+										<optgroup label="--Magia--">
+											<option value="10">Mg. Normal</option>
+											<option value="11">Mg. Rápido</option>
+											<option value="12">Mg. Continua</option>
+											<option value="13">Mg. Campo</option>
+											<option value="14">Mg. Equipo</option>
+											<option value="15">Mg. Ritual</option>
+										</optgroup>
+										<optgroup label="--Trampa--">
+											<option value="17">T. Normal</option>
+											<option value="18">T. Continua</option>
+											<option value="19">T. Counter</option>
+										</optgroup>
+										<optgroup label="--Otros--">
+											<option value="20">Sobres/Cajas</option>
+											<option value="21">Decks</option>
+											<option value="22">Tableros</option>
+											<option value="23">Estuches</option>
+										</optgroup>
+									</select>
+								</div>
+							</div>
+							<!--Cantidad de cartas-->
+							<div class="row form-group no-gutters">
+								<div class="col-2">
+									Cantidad de cartas
+								</div>
+								<div class="col-3">
+									<input type="number" name="" class="form-control">
+								</div>
+								<small class="col text-muted">Este campo es para cuando su producto incluye múltiples elementos en uno solo. Por ejemplo, un deck. No es lo mismo que las unidades disponibles a vender.</small>
+							</div>
+							<!---->
+						</div>						
+					</div>
+					
+					<!-- Unidades, precio y formas de pago -->
+					<div class="row titular">
+						<div class="col-12 table-secondary">
+							<h2>Unidades, precio y formas de pago</h2>
+						</div>
+					</div>
+					<div class="row mt-2 contenido">
+						<!-- Unidades y precio -->
+						<div class="col-6">
+							<!-- Unidades-->
+							<div class="row form-group no-gutters">
+								<div class="col-4">
+									Unidades
+								</div>
+								<div class="col-4">
+									<input type="number" name="" class="form-control">
+								</div>
+							</div>
+							<!-- Precio -->
+							<div class="row form-group no-gutters">
+								<div class="col-4">
+									Precio
+								</div>
+								<div class="col-4">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+										</div>
+										<input type="number" name="" class="form-control">
+									</div>
+								</div>
+							</div>
+							<!---->
+						</div>
+						<!---->
+
+						<!-- Formas de pago -->
+						<div class="col-6 d-flex flex-column justify-content-center">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" name="" class="custom-control-input" id="check-credito">
+								<label class="custom-control-label" for="check-credito">Crédito</label>
+							</div>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" name="" class="custom-control-input" id="check-debito">
+								<label class="custom-control-label" for="check-debito">Débito</label>
+							</div>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" name="" class="custom-control-input" id="check-deposito">
+								<label class="custom-control-label" for="check-deposito">Depósito</label>
+							</div>
+						</div>
+					</div>
+
+					<!-- Imágenes y video -->
+					<div class="row titular">
+						<div class="col-12 table-secondary">
+							<h2>Imágenes y video</h2>
+						</div>
+					</div>
+					<div class="row mt-2 contenido">
+						<!-- Lista de imágenes -->
+						<div class="col-6">
+							Debe elegir mínimo 1 imagen. Puede agregar hasta un máximo de 8 imágenes. La primera imagen de la lista será la que se mostrará en las búsquedas del sitio.
+							<ul class="list-unstyled" id="lista-img">
+								<li class="d-flex flew-row mb-3">
+									<div class="img-box">
+										<img src="img/bear.png">
+									</div>
+									<div class="d-flex align-items-center ml-2">
+										<div class="custom-file">
+										    <input type="file" class="custom-file-input" id="input-file-img-01" aria-describedby="inputGroupFileAddon01" required="" accept="image/*">
+											<label class="custom-file-label" for="input-file-img-01">Elige un archivo</label>
+										</div>
+									</div>
+								</li>
+								<li class="d-flex flew-row mb-3">
+									<div class="img-box">
+										<img src="img/bear.png">
+									</div>
+									<div class="d-flex align-items-center ml-2">
+										<div class="custom-file">
+										    <input type="file" class="custom-file-input" id="input-file-img-02" aria-describedby="inputGroupFileAddon01" accept="image/*">
+											<label class="custom-file-label" for="input-file-img-02">Elige un archivo</label>
+										</div>
+									</div>
+								</li>
+								<li class="d-flex flew-row mb-3">
+									<div class="img-box">
+										<img src="img/bear.png">
+									</div>
+									<div class="d-flex align-items-center ml-2">
+										<div class="custom-file">
+										    <input type="file" class="custom-file-input" id="input-file-img-03" aria-describedby="inputGroupFileAddon01" accept="image/*">
+											<label class="custom-file-label" for="input-file-img-03">Elige un archivo</label>
+										</div>
+									</div>
+								</li>
+								<li class="d-flex flew-row mb-3">
+									<div class="img-box">
+										<img src="img/bear.png">
+									</div>
+									<div class="d-flex align-items-center ml-2">
+										<div class="custom-file">
+										    <input type="file" class="custom-file-input" id="input-file-img-04" aria-describedby="inputGroupFileAddon01" accept="image/*">
+											<label class="custom-file-label" for="input-file-img-04">Elige un archivo</label>
+										</div>
+									</div>
+								</li>
+								<li class="d-flex flew-row mb-3">
+									<div class="img-box">
+										<img src="img/bear.png">
+									</div>
+									<div class="d-flex align-items-center ml-2">
+										<div class="custom-file">
+										    <input type="file" class="custom-file-input" id="input-file-img-05" aria-describedby="inputGroupFileAddon01" accept="image/*">
+											<label class="custom-file-label" for="input-file-img-05">Elige un archivo</label>
+										</div>
+									</div>
+								</li>
+								<li class="d-flex flew-row mb-3">
+									<div class="img-box">
+										<img src="img/bear.png">
+									</div>
+									<div class="d-flex align-items-center ml-2">
+										<div class="custom-file">
+										    <input type="file" class="custom-file-input" id="input-file-img-06" aria-describedby="inputGroupFileAddon01" accept="image/*">
+											<label class="custom-file-label" for="input-file-img-06">Elige un archivo</label>
+										</div>
+									</div>
+								</li>
+								<li class="d-flex flew-row mb-3">
+									<div class="img-box">
+										<img src="img/bear.png">
+									</div>
+									<div class="d-flex align-items-center ml-2">
+										<div class="custom-file">
+										    <input type="file" class="custom-file-input" id="input-file-img-07" aria-describedby="inputGroupFileAddon01" accept="image/*">
+											<label class="custom-file-label" for="input-file-img-07">Elige un archivo</label>
+										</div>
+									</div>
+								</li>
+								<li class="d-flex flew-row mb-3">
+									<div class="img-box">
+										<img src="img/bear.png">
+									</div>
+									<div class="d-flex align-items-center ml-2">
+										<div class="custom-file">
+										    <input type="file" class="custom-file-input" id="input-file-img-08" aria-describedby="inputGroupFileAddon01" accept="image/*">
+											<label class="custom-file-label" for="input-file-img-08">Elige un archivo</label>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- Lista de videos -->
+						<div class="col-6">
+							Puede elegir hasta un máximo de 2 videos. Este campo no es obligatorio.
+							<ul class="list-unstyled" id="lista-video">
+								<li class="d-flex flew-row mb-3">
+									<div class="video bg-warning">
+										<div class="embed-responsive embed-responsive-16by9">
+											<video type="video/mp4" class="embed-responsive-item" controls="">
+												<source src="video/ditto.mp4" type="video/mp4">
+											</video>
+										</div>
+									</div>
+									<div class="d-flex align-items-center ml-2">
+										<div class="custom-file">
+										    <input type="file" class="custom-file-input" id="input-file-video01" aria-describedby="inputGroupFileAddon01" required="" accept="video/*">
+											<label class="custom-file-label" for="input-file-video01">Elige un archivo</label>
+										</div>
+									</div>
+								</li>
+								<li class="d-flex flew-row mb-3">
+									<div class="video bg-warning">
+										<div class="embed-responsive embed-responsive-16by9">
+											<video type="video/mp4" class="embed-responsive-item" controls="">
+												<source src="video/ditto.mp4" type="video/mp4">
+											</video>
+										</div>
+									</div>
+									<div class="d-flex align-items-center ml-2">
+										<div class="custom-file">
+										    <input type="file" class="custom-file-input" id="input-file-video02" aria-describedby="inputGroupFileAddon01" required="" accept="video/*">
+											<label class="custom-file-label" for="input-file-video02">Elige un archivo</label>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="row justify-content-center mb-4">
+						<div class="col-2 mr-2">
+							<button class="btn btn-success btn-block" type="submit">Publicar</button>
+						</div>
+						<div class="col-2 ml-2">
+							<button class="btn btn-warning btn-block" type="submit">Guardar</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<!-- MODALES -->
+			<div class="container">
+				<!-- MODAL LOGIN -->
+				<div class="row">
+					<div class="col">
+						<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title" id="">Log In</h1>
+										<button class="close" data-dismiss="modal" aria-label="cerrar"><span aria-hidden="true">&times;</span></button>
+									</div>
+									<div class="modal-body">
+										<div class="container-fluid">
+											<form action="" class="form-row justify-content-center">
+												<div class="col-10 form-group">
+													<label for="login-id">Usuario</label>
+													<input type="text" name="" id="login-id" class="form-control" placeholder="Correo o Id">
+													<small id="login-id-help" class="form-text">Ingrese su id o su correo</small>
+												</div>
+												<div class="col-10 form-group">
+													<label for="login-password">Contraseña</label>
+													<input type="password" name="" id="login-password" class="form-control" placeholder="Contraseña">
+													<small id="login-password-help" class="form-text">Recuerde que su contraseña es encriptada y no podrá recuperarse</small>
+												</div>
+												<div class="col-10 form-group">
+													<a href="registro.html" style="text-decoration: none;">Crear una cuenta nueva</a>
+												</div>
+												<div class="col-10">
+													<button class="btn btn-success btn-block">Iniciar</button>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="modal-footer">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- SCRIPTS -->
+		<script type="text/javascript" src="fontawesome-free/js/all.min.js"></script>
+		<script type="text/javascript" src="Jquery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="Jquery/popper.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>

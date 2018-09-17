@@ -1,0 +1,41 @@
+/*------------------ PAGO.CSS ----------------*/
+#pago-title{
+	background: #D6D6D6;
+	color: #4F4D4D;
+	padding: 20px;
+}
+
+.accordion .card .btn-link{
+	text-decoration: none;
+}
+
+.accordion .card .table td{
+	text-align: center;
+}
+
+.accordion .card .table td.price,
+.accordion .card .table td.subtotal,
+.accordion .card .table th.total{
+	text-align: right;
+}
+
+.accordion input[type=number]::-webkit-inner-spin-button{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.accordion #deposito-form div.col-2{
+	background: #C6C6C6;
+	border-bottom: 1px solid #818181;
+	border-right: 1px solid #818181;
+	margin-bottom: 1px;
+}
+
+.accordion #deposito-form div.col-4{
+	background: #CACACA;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #818181;
+	border-right: 1px solid #818181;
+	margin-bottom: 1px;
+}

@@ -1,0 +1,53 @@
+#historial p.h3{
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+/*--------- HISTORIAL PURCHASE INFO ---------*/
+#historial .historial-purchase span.historial-id-label,
+#historial .historial-purchase span.historial-seller-label{
+	background: #3B3B3B;
+	color: #fff;
+	padding: 10px;
+	border-radius: 5px 0 0 5px;
+	margin-left: 15px;
+	font-weight: 500;
+}
+
+#historial .historial-purchase span.historial-id-text,
+#historial .historial-purchase a.historial-seller-text{
+	background: #686868;
+	color: #fff;
+	padding: 10px;
+	border-radius: 0 5px 5px 0;
+	text-align: left;
+	text-decoration: none;
+}
+
+#historial .historial-purchase span.historial-id-text:hover,
+#historial .historial-purchase a.historial-seller-text:hover{
+	background: #4B4A4A;
+}
+
+/*-------------- TABlA -----*/
+#historial-tabla{
+	margin-top: 5px;
+	margin-top: 0;
+}
+
+#historial-tabla th{
+	border-top: 0;
+}
+
+#historial-tabla td{
+	text-align: center;
+}
+
+#historial-tabla td.title{
+	font-weight: 500;
+}
+
+#historial-tabla td.subtotal,
+#historial-tabla th.total{
+	text-align: right;
+}

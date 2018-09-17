@@ -1,0 +1,41 @@
+:root{
+	--measure1: 100px;
+	--measure2: 520px;
+	--measure3: 174px;
+}
+
+body{
+	background: #D5D1D1;
+	/*background: #943a76;*/
+	/*background: #bf92bd;*/
+}
+
+main .img-container{
+	background: #fff;
+	max-width: var(--measure1);
+	min-height: var(--measure1);
+	max-height: var(--measure1);
+	border-radius: 100px;
+	overflow: hidden;
+}
+
+main .img-container img{
+	width: 100%;
+}
+
+main .img-container2{
+	background: #fff;
+	max-width: var(--measure2);
+	min-height: var(--measure3);
+	max-height: var(--measure3);
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+main .img-container2 img{
+	width: 100%;
+}
+
+main .form-title1{
+	font-family: 'Baloo Tammudu', sans-serif;
+}

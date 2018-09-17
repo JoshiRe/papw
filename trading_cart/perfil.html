@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Perfil</title>
+
+		<!-- META INFO-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		<!-- PLUG-IN -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+
+		<!-- FUENTES -->
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+
+		<!-- ESTILOS -->
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<link rel="stylesheet" type="text/css" href="css/perfil.css">
+		<link rel="stylesheet" type="text/css" href="css/publicaciones.css">
+		<link rel="stylesheet" type="text/css" href="css/borradores.css">
+		<link rel="stylesheet" type="text/css" href="css/historial.css">
+		<link rel="stylesheet" type="text/css" href="css/carrito.css">
+
+		<!-- ÍCONO -->
+		<link rel="apple-touch-icon" sizes="180x180" href="icono/apple-touch-icon.png">
+    	<link rel="icon" type="image/png" sizes="32x32" href="icono/favicon-32x32.png">
+    	<link rel="icon" type="image/png" sizes="16x16" href="icono/favicon-16x16.png">
+    	<link rel="manifest" href="icono/site.webmanifest">
+    	<link rel="mask-icon" href="icono/safari-pinned-tab.svg" color="#5bbad5">
+    	<link rel="shortcut icon" href="icono/favicon.ico">
+    	<meta name="msapplication-TileColor" content="#000000">
+    	<meta name="msapplication-config" content="icono/browserconfig.xml">
+    	<meta name="theme-color" content="#ffffff">
+
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="row justify-content-between">
+					<!-- LOGO -->
+					<div class="col-1 d-flex justify-content-center">
+						<a href="index.html">
+							<div class="foto d-flex align-items-center justify-content-center">			
+								<img src="img/logo1.png">
+							</div>
+						</a>
+					</div>
+
+					<!-- BUSQUEDA -->
+					<div class="col-6 d-flex align-items-center justify-content-center p-0">
+						<form class="form-row w-100">
+							<div class="col-12">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<select class="custom-select  btn btn-warning bg-warning">
+											<option selected>Todo</option>
+											<option disabled="">--Monstruos--</option>
+											<option value="0">Mn. Todo</option>
+											<option value="1">Normales</option>
+											<option value="2">Efecto</option>
+											<option value="3">Fusión</option>
+											<option value="4">Ritual</option>
+											<option value="5">XYZ</option>
+											<option value="6">Synchro</option>
+											<option value="7">Péndulo</option>
+											<option value="8">Link</option>
+											<option disabled="">--Magia--</option>
+											<option value="9">Mg. Todo</option>
+											<option value="10">Mg. Normal</option>
+											<option value="11">Mg. Rápido</option>
+											<option value="12">Mg. Continua</option>
+											<option value="13">Mg. Campo</option>
+											<option value="14">Mg. Equipo</option>
+											<option value="15">Mg. Ritual</option>
+											<option disabled="">--Trampa--</option>
+											<option value="16">T. Todo</option>
+											<option value="17">T. Normal</option>
+											<option value="18">T. Continua</option>
+											<option value="19">T. Counter</option>
+											<option disabled="">--Otros--</option>
+											<option value="20">Sobres/Cajas</option>
+											<option value="21">Decks</option>
+											<option value="22">Tableros</option>
+											<option value="23">Estuches</option>
+										</select>
+									</div>
+									<input type="text" name="" placeholder="Buscar..." class="form-control">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+									</div>
+								</div>
+							</div>
+						</form>					
+					</div>
+
+					<!-- NAVEGACIÓN -->
+					<nav class="col-3" id="nav-menu">
+						<div class="row h-100">
+							<div class="col-6 p-0 d-flex justify-content-center btn-login" data-toggle="modal" data-target="#modal-login">
+								<!-- Contenido del botón Log In -->
+								<div class="row flex-column w-100 btn-login-body">
+									<div class="col d-flex justify-content-center btn-login-header">
+										<div class="btn-login-img-container d-flex align-items-center">
+											<img src="img/user1.jpg">
+										</div>
+									</div>
+									<div class="col d-flex justify-content-center btn-login-link">
+										<a href="#">Log In</a>
+									</div>
+								</div>
+								<!------ Carrito -------------->
+							</div>
+							<div class="col-6 d-flex align-items-center justify-content-center btn-cart">
+								<div class="dropdown dp-cart">
+									<i class="fas fa-shopping-cart fa-2x" id="dp-cart" data-toggle="collapse" data-target="#carrito" aria-expanded="false" aria-controls="carrito"></i>
+									<!--
+									<div class="row dropdown-menu dropdown-menu-right px-2" aria-labelledby="dp-cart">
+										
+										<div class="col">
+											<table class="table table-bordered table-striped">
+												<thead class="thead-dark">
+												<tr>
+													<th scope="col"></th>
+													<th scope="col" colspan="2">Producto</th>
+													<th scope="col">Unidades</th>
+													<th scope="col">$</th>
+													<th scope="col">Eliminar</th>
+												</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr class="tr-total">
+														<td class="td-total-label">Total</td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td class="td-total">3000.00</td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="col">
+											<button class="btn btn-outline-success btn-block">Gestionar</button>
+										</div>
+									</div>
+									-->
+								</div>
+							</div>
+						</div>
+					</nav>
+
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<!-- PRINCIPAL -->
+			<!-- Imagen de perfil / portada -->
+			<div class="container-fluid">
+				<div class="row perfil bg-dark" id="perfil">
+					<!-- Perfil -->
+					<a class="col-2 py-3 d-flex justify-content-center perfil-col" data-toggle="collapse" data-target="#perfil-nav-menu" aria-expanded="false" aria-controls="perfil-nav-menu" id="perfil-col">
+						<div class="perfil-img-container">
+							<img src="img/foto.jpg">
+						</div>
+					</a>
+
+					<!-- Portada -->
+					<div class="col-10 perfil-coverimg-col">
+						<div class="perfil-coverimg-container">
+							<img src="img/img-5.jpg">
+						</div>
+					</div>
+				</div>
+
+				<!-- CONTENIDO -->
+				<div class="row">
+					<div class="col-2 bg-dark" id="perfil-nav-col">
+						<div class="perfil-username text-dark">JoshiRe</div>
+						<!-- NAVEGACIÓN -->
+						<div id="perfil-nav-menu" class="collapse" aria-labelledby="perfil-nav-menu" data-parent="#perfil-col">
+							<nav id="perfil-nav-items">
+								<span>
+									<a href="" class="collapsed" data-toggle="collapse" data-target="#publicaciones" aria-expanded="false" aria-controls="publicaciones" id="publicaciones-link">
+										<i class="fas fa-boxes"></i> Publicaciones
+									</a>
+								</span>
+								<span>
+									<a href="" class="collapsed" data-toggle="collapse" data-target="#borradores" aria-expanded="false" aria-controls="borradores" id="borradores-link">
+										<i class="fas fa-eraser"></i> Borradores
+									</a>
+								</span>
+								<span>
+									<a href="" class="collapsed" data-toggle="collapse" data-target="#historial" aria-expanded="false" aria-controls="historial" id="historial-link">
+										<i class="fas fa-history"></i> Historial
+									</a>
+								</span>
+								<span>
+									<a href="" class="collapsed" data-toggle="collapse" data-target="#carrito" aria-expanded="false" aria-controls="carrito" id="carrito-link">
+										<i class="fas fa-shopping-cart"></i> Carrito
+									</a>
+								</span>
+								<span>
+									<a href="">
+										<i class="fas fa-shopping-basket"></i> Vender
+									</a>
+								</span>
+								<span>
+									<a href="">
+										<i class="fas fa-sign-out-alt"></i> Salir
+									</a>
+								</span>
+							</nav>
+						</div>
+					</div>
+
+					<!-- SECCIONES -->
+					<div class="col-10" id="perfil-content">
+						<!-- SECCIÓN DEPUBLICACIONES -->
+						<div id="publicaciones" class="row collapse justify-content-center"  aria-labelledby="publicaciones-link test-link" data-parent="#perfil-content">
+							
+							<p class="col-12 h3">
+								<i class="fas fa-boxes"></i> Publicaciones
+							</p>
+							<div class="col-10">
+								<table id="publicaciones-tabla" class="table table-striped">
+									<thead class="thead-dark">
+										<tr>
+											<th scope="col">Id</th>
+											<th scope="col">Imagen</th>
+											<th scope="col">Título</th>
+											<th scope="col">Fecha</th>
+											<th scope="col">Estatus</th>
+											<th scope="col">Editar</th>
+											<th scope="col">Deshabilitar</th>
+											<th scope="col">Borrar</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td><img src="img/bear.png" width="100px"></td>
+											<td>FLuffal</td>
+											<td>15/09/18</td>
+											<td data-status="active"><i class="fas fa-square"></i></td>
+											<td><button class="btn btn-primary"><i class="fas fa-edit"></i></button></td>
+											<td><button class="btn btn-warning" data-toggle="modal" data-target="#modal-disablePost"><i class="fas fa-power-off"></i></button></td>
+											<td><button class="btn btn-danger" data-toggle="modal" data-target="#modal-deletePost"><i class="fas fa-trash"></i></button></td>
+										</tr>
+											<tr>
+												<th scope="row">2</th>
+												<td><img src="img/bear.png" width="100px"></td>
+												<td>FLuffal 2</td>
+												<td>15/09/18</td>
+												<td data-status="pending"><i class="fas fa-square"></i></td>
+												<td><button class="btn btn-primary"><i class="fas fa-edit"></i></button></td>
+												<td><button class="btn btn-warning" data-toggle="modal" data-target="#modal-disablePost"><i class="fas fa-power-off"></i></button></td>
+												<td><button class="btn btn-danger" data-toggle="modal" data-target="#modal-deletePost"><i class="fas fa-trash"></i></button></td>
+											</tr>
+											<tr>
+												<th scope="row">3</th>
+												<td><img src="img/bear.png" width="100px"></td>
+												<td>FLuffal 3</td>
+												<td>15/09/18</td>
+												<td data-status="down"><i class="fas fa-square"></i></td>
+												<td><button class="btn btn-primary"><i class="fas fa-edit"></i></button></td>
+												<td><button class="btn btn-warning" data-toggle="modal" data-target="#modal-disablePost"><i class="fas fa-power-off"></i></button></td>
+												<td><button class="btn btn-danger" data-toggle="modal" data-target="#modal-deletePost"><i class="fas fa-trash"></i></button></td>
+											</tr>
+										</tbody>
+								</table>
+							</div>
+						</div>
+
+						<!-- SECCIÓN DE BORRADORES -->
+						<div id="borradores" class="row collapse justify-content-center" aria-labelledby="borradores-link" data-parent="#perfil-content">
+								
+							<p class="col-12 h3">
+								<i class="fas fa-eraser"></i> Borradores
+							</p>
+							<div class="col-10">
+								<table id="borradores-tabla" class="table table-striped">
+									<thead class="thead-dark">
+										<tr>
+											<th scope="col">Id</th>
+											<th scope="col">Imagen</th>
+											<th scope="col">Título</th>
+											<th scope="col">Fecha</th>
+											<th scope="col">Estatus</th>
+											<th scope="col">Editar</th>
+											<th scope="col">Publicar</th>
+											<th scope="col">Borrar</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td><img src="img/bear.png" width="100px"></td>
+											<td>FLuffal</td>
+											<td>15/09/18</td>
+											<td data-status="pending"><i class="fas fa-square"></i></td>
+											<td><button class="btn btn-primary"><i class="fas fa-edit"></i></button></td>
+											<td><button class="btn btn-success" data-toggle="modal" data-target="#modal-enablePost"><i class="fas fa-pastafarianism"></i></button></td>
+											<td><button class="btn btn-danger" data-toggle="modal" data-target="#modal-deletePost"><i class="fas fa-trash"></i></button></td>
+										</tr>
+											<tr>
+												<th scope="row">2</th>
+												<td><img src="img/bear.png" width="100px"></td>
+												<td>FLuffal 2</td>
+												<td>15/09/18</td>
+												<td data-status="pending"><i class="fas fa-square"></i></td>
+												<td><button class="btn btn-primary"><i class="fas fa-edit"></i></button></td>
+												<td><button class="btn btn-success" data-toggle="modal" data-target="#modal-enablePost"><i class="fas fa-pastafarianism"></i></button></td>
+												<td><button class="btn btn-danger" data-toggle="modal" data-target="#modal-deletePost"><i class="fas fa-trash"></i></button></td>
+											</tr>
+											<tr>
+												<th scope="row">3</th>
+												<td><img src="img/bear.png" width="100px"></td>
+												<td>FLuffal 3</td>
+												<td>15/09/18</td>
+												<td data-status="pending"><i class="fas fa-square"></i></td>
+												<td><button class="btn btn-primary"><i class="fas fa-edit"></i></button></td>
+												<td><button class="btn btn-success" data-toggle="modal" data-target="#modal-enablePost"><i class="fas fa-pastafarianism"></i></button></td>
+												<td><button class="btn btn-danger" data-toggle="modal" data-target="#modal-deletePost"><i class="fas fa-trash"></i></button></td>
+											</tr>
+										</tbody>
+								</table>
+							</div>
+						</div>
+
+						<!-- SECCIÓN DE HISTORIAL -->
+						<div id="historial" class="row collapse justify-content-center" aria-labelledby="historial-link" data-parent="#perfil-content">
+							<p class="col-12 h3">
+								<i class="fas fa-history"></i> Historial
+							</p>
+
+							<!-- Tablas de historial -->
+							<div class="col-10 historial-purchase">
+								<div class="row">
+									<span class="col-1 historial-id-label">Id</span>
+									<span class="col-3 historial-id-text">5346</span>
+								</div>
+								<div class="row">
+									<span class="col-1 historial-seller-label">Vendedor</span>
+									<a href="" class="col-3 historial-seller-text">
+										JoshiRe
+									</a>
+								</div>
+							</div>
+							<div class="col-10 mb-3">
+								<table id="historial-tabla" class="table table-striped" data-tableNo="0">
+									<thead class="thead-dark">
+										<tr>
+											<th scope="col">Id</th>
+											<th scope="col">Imagen</th>
+											<th scope="col">Título</th>
+											<th scope="col">Fecha</th>
+											<th scope="col">Unidades</th>
+											<th scope="col">Precio unitario</th>
+											<th scope="col">Subtotal</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row" class="id">1</th>
+											<td class="img"><img src="img/bear.png" width="100px"></td>
+											<td class="title">FLuffal</td>
+											<td class="date">15/09/18</td>
+											<td class="units">2</td>
+											<td class="price">250.00</td>
+											<td class="subtotal">500.00</td>
+										</tr>
+										<tr>
+											<th scope="row" class="id">2</th>
+											<td class="img"><img src="img/bear.png" width="100px"></td>
+											<td class="title">FLuffal</td>
+											<td class="date">15/09/18</td>
+											<td class="units">2</td>
+											<td class="price">250.00</td>
+											<td class="subtotal">500.00</td>
+										</tr>
+										<tr>
+											<th scope="row" class="id">3</th>
+											<td class="img"><img src="img/bear.png" width="100px"></td>
+											<td class="title">FLuffal</td>
+											<td class="date">15/09/18</td>
+											<td class="units">2</td>
+											<td class="price">250.00</td>
+											<td class="subtotal">500.00</td>
+										</tr>
+									</tbody>
+									<thead class="thead-light">
+										<tr class="">
+											<th>Total</th>
+											<th colspan="5"></th>
+											<th class="total">1500.00</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+
+							<div class="col-10 historial-purchase">
+								<div class="row">
+									<span class="col-1 historial-id-label">Id</span>
+									<span class="col-3 historial-id-text">5346</span>
+								</div>
+								<div class="row">
+									<span class="col-1 historial-seller-label">Vendedor</span>
+									<a href="" class="col-3 historial-seller-text">
+										JoshiRe
+									</a>
+								</div>
+							</div>
+							<div class="col-10 mb-3">
+								<table id="historial-tabla" class="table table-striped" data-tableNo="1">
+									<thead class="thead-dark">
+										<tr>
+											<th scope="col">Id</th>
+											<th scope="col">Imagen</th>
+											<th scope="col">Título</th>
+											<th scope="col">Fecha</th>
+											<th scope="col">Unidades</th>
+											<th scope="col">Precio unitario</th>
+											<th scope="col">Subtotal</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row" class="id">1</th>
+											<td class="img"><img src="img/bear.png" width="100px"></td>
+											<td class="title">FLuffal</td>
+											<td class="date">15/09/18</td>
+											<td class="units">2</td>
+											<td class="price">250.00</td>
+											<td class="subtotal">500.00</td>
+										</tr>
+										<tr>
+											<th scope="row" class="id">2</th>
+											<td class="img"><img src="img/bear.png" width="100px"></td>
+											<td class="title">FLuffal</td>
+											<td class="date">15/09/18</td>
+											<td class="units">2</td>
+											<td class="price">250.00</td>
+											<td class="subtotal">500.00</td>
+										</tr>
+										<tr>
+											<th scope="row" class="id">3</th>
+											<td class="img"><img src="img/bear.png" width="100px"></td>
+											<td class="title">FLuffal</td>
+											<td class="date">15/09/18</td>
+											<td class="units">2</td>
+											<td class="price">250.00</td>
+											<td class="subtotal">500.00</td>
+										</tr>
+									</tbody>
+									<thead class="thead-light">
+										<tr class="">
+											<th>Total</th>
+											<th colspan="5"></th>
+											<th class="total">1500.00</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+
+						<!-- SECCIÓN DEL CARRITO -->
+						<div id="carrito" class="row collapse justify-content-center" aria-labelledby="carrito-link dp-cart" data-parent="#perfil-content">
+							
+							<p class="col-12 h3">
+								<i class="fas fa-shopping-cart"></i> Carrito
+							</p>
+
+							<!-- Tablas del Carrito -->
+							<div class="col-10 carrito-purchase">
+								<div class="row">
+									<span class="col-1 carrito-id-label">Id</span>
+									<span class="col-3 carrito-id-text">5346</span>
+								</div>
+								<div class="row">
+									<span class="col-1 carrito-seller-label">Vendedor</span>
+									<a href="" class="col-3 carrito-seller-text">
+										JoshiRe
+									</a>
+								</div>
+							</div>
+							<div class="col-10">
+								<table id="carrito-tabla" class="table table-striped" data-tableNo="0">
+									<thead class="thead-dark">
+										<tr>
+											<th scope="col">Id</th>
+											<th scope="col">Imagen</th>
+											<th scope="col">Título</th>
+											<th scope="col">Fecha</th>
+											<th scope="col">Unidades</th>
+											<th scope="col">Precio unitario</th>
+											<th scope="col">Subtotal</th>
+											<th scope="col">Quitar</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row" class="id">1</th>
+											<td class="img"><img src="img/bear.png" width="100px"></td>
+											<td class="title">FLuffal</td>
+											<td class="date">15/09/18</td>
+											<td class="units">2</td>
+											<td class="price">250.00</td>
+											<td class="subtotal">500.00</td>
+											<td class="remove"><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+										</tr>
+										<tr>
+											<th scope="row" class="id">2</th>
+											<td class="img"><img src="img/bear.png" width="100px"></td>
+											<td class="title">FLuffal</td>
+											<td class="date">15/09/18</td>
+											<td class="units">2</td>
+											<td class="price">250.00</td>
+											<td class="subtotal">500.00</td>
+											<td class="remove"><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+										</tr>
+										<tr>
+											<th scope="row" class="id">3</th>
+											<td class="img"><img src="img/bear.png" width="100px"></td>
+											<td class="title">FLuffal</td>
+											<td class="date">15/09/18</td>
+											<td class="units">2</td>
+											<td class="price">250.00</td>
+											<td class="subtotal">500.00</td>
+											<td class="remove"><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+										</tr>
+									</tbody>
+									<thead class="thead-light">
+										<tr class="">
+											<th>Total</th>
+											<th colspan="5"></th>
+											<th class="total">1500.00</th>
+											<th></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div class="col-10 mb-3 d-flex flex-row justify-content-end carrito-finalize">
+								<div class="mr-3"><button class="btn btn-success btn-block">Comprar</button></div>
+								<div><button class="btn btn-outline-dark btn-block">Vaciar</button></div>
+							</div>
+
+							<div class="col-10 carrito-purchase">
+								<div class="row">
+									<span class="col-1 carrito-id-label">Id</span>
+									<span class="col-3 carrito-id-text">5346</span>
+								</div>
+								<div class="row">
+									<span class="col-1 carrito-seller-label">Vendedor</span>
+									<a href="" class="col-3 carrito-seller-text">
+										JoshiRe
+									</a>
+								</div>
+							</div>
+							<div class="col-10">
+								<table id="carrito-tabla" class="table table-striped" data-tableNo="1">
+									<thead class="thead-dark">
+										<tr>
+											<th scope="col">Id</th>
+											<th scope="col">Imagen</th>
+											<th scope="col">Título</th>
+											<th scope="col">Fecha</th>
+											<th scope="col">Unidades</th>
+											<th scope="col">Precio unitario</th>
+											<th scope="col">Subtotal</th>
+											<th scope="col">Quitar</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row" class="id">1</th>
+											<td class="img"><img src="img/bear.png" width="100px"></td>
+											<td class="title">FLuffal</td>
+											<td class="date">15/09/18</td>
+											<td class="units">2</td>
+											<td class="price">250.00</td>
+											<td class="subtotal">500.00</td>
+											<td class="remove"><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+										</tr>
+										<tr>
+											<th scope="row" class="id">2</th>
+											<td class="img"><img src="img/bear.png" width="100px"></td>
+											<td class="title">FLuffal</td>
+											<td class="date">15/09/18</td>
+											<td class="units">2</td>
+											<td class="price">250.00</td>
+											<td class="subtotal">500.00</td>
+											<td class="remove"><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+										</tr>
+										<tr>
+											<th scope="row" class="id">3</th>
+											<td class="img"><img src="img/bear.png" width="100px"></td>
+											<td class="title">FLuffal</td>
+											<td class="date">15/09/18</td>
+											<td class="units">2</td>
+											<td class="price">250.00</td>
+											<td class="subtotal">500.00</td>
+											<td class="remove"><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+										</tr>
+									</tbody>
+									<thead class="thead-light">
+										<tr class="">
+											<th>Total</th>
+											<th colspan="5"></th>
+											<th class="total">1500.00</th>
+											<th></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div class="col-10 mb-3 d-flex flex-row justify-content-end carrito-finalize">
+								<div class="mr-3"><button class="btn btn-success btn-block">Comprar</button></div>
+								<div><button class="btn btn-outline-dark btn-block">Vaciar</button></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- MODALES -->
+			<div class="container">
+				<!-- MODAL LOGIN -->
+				<div class="row">
+					<div class="col">
+						<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title" id="">Log In</h1>
+										<button class="close" data-dismiss="modal" aria-label="cerrar"><span aria-hidden="true">&times;</span></button>
+									</div>
+									<div class="modal-body">
+										<div class="container-fluid">
+											<form action="" class="form-row justify-content-center">
+												<div class="col-10 form-group">
+													<label for="login-id">Usuario</label>
+													<input type="text" name="" id="login-id" class="form-control" placeholder="Correo o Id">
+													<small id="login-id-help" class="form-text">Ingrese su id o su correo</small>
+												</div>
+												<div class="col-10 form-group">
+													<label for="login-password">Contraseña</label>
+													<input type="password" name="" id="login-password" class="form-control" placeholder="Contraseña">
+													<small id="login-password-help" class="form-text">Recuerde que su contraseña es encriptada y no podrá recuperarse</small>
+												</div>
+												<div class="col-10 form-group">
+													<a href="registro.html" style="text-decoration: none;">Crear una cuenta nueva</a>
+												</div>
+												<div class="col-10">
+													<button class="btn btn-success btn-block">Iniciar</button>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="modal-footer">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- MODAL PUBLICACIONES: BORRAR -->
+				<div class="row">
+					<div class="col">
+						<div class="modal fade" id="modal-deletePost" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<p class="h1"><i class="fas fa-exclamation-triangle"></i> Alerta</p>
+										<button class="close" data-dismiss="modal" aria-label="Cerrar">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="container-fluid">
+											<div class="row justify-content-center">
+												<p class="col-8 h4 text-center">
+													¿Realmente desea elminar esta publicación?
+												</p>
+												<small>
+													Sus publicaciones quedarán alamecenadas en la base de datos; sin embargo no podrá volverlas a publicar. Si desea deshabilitarla, elija otra opción.
+												</small>
+											</div>
+											<div class="row justify-content-around mt-4">
+												<div class="col-3">
+													<button class="btn btn-danger btn-block">Borrar</button>
+												</div>
+												<div class="col-3">
+													<button class="btn btn-default btn-block" data-dismiss="modal">Cancelar</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- MODAL PUBLICACIONES: DESHABILITAR -->
+				<div class="row">
+					<div class="col">
+						<div class="modal fade" id="modal-disablePost" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<p class="h1"><i class="fas fa-exclamation-triangle"></i> Alerta</p>
+										<button class="close" data-dismiss="modal" aria-label="Cerrar">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="container-fluid">
+											<div class="row justify-content-center">
+												<p class="col-10 h4 text-center">
+													¿Realmente desea deshabilitar esta publicación?
+												</p>
+												<small>
+													Sus publicaciones deshabilitadas no aparecerán en las búsquedas del sitio. Estas publicaciones pueden volverse a habilitar desde la sección de borradores.
+												</small>
+											</div>
+											<div class="row justify-content-around mt-4">
+												<div class="col-4">
+													<button class="btn btn-warning btn-block">Deshabilitar</button>
+												</div>
+												<div class="col-4">
+													<button class="btn btn-default btn-block" data-dismiss="modal">Cancelar</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- MODAL PUBLICACIONES: PUBLICAR -->
+				<div class="row">
+					<div class="col">
+						<div class="modal fade" id="modal-enablePost" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<p class="h1"><i class="fas fa-pastafarianism"></i> Alerta</p>
+										<button class="close" data-dismiss="modal" aria-label="Cerrar">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="container-fluid">
+											<div class="row justify-content-center">
+												<p class="col-10 h4 text-center">
+													¿Realmente desea habilitar esta publicación?
+												</p>
+												<small>
+													Las publicaciones habilitadas aparecerán en las búsquedas del sitio. Cuando las unidades de su producto se hayan agotado, su publicación se deshabilitará.
+												</small>
+											</div>
+											<div class="row justify-content-around mt-4">
+												<div class="col-4">
+													<button class="btn btn-success btn-block">Publicar</button>
+												</div>
+												<div class="col-4">
+													<button class="btn btn-default btn-block" data-dismiss="modal">Cancelar</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- SCRIPTS -->
+		<script type="text/javascript" src="Jquery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="Jquery/popper.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>

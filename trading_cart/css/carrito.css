@@ -1,0 +1,61 @@
+/*------------------ CARRITO.CSS ----------------------------*/
+#carrito p.h3{
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+/*--------- carrito PURCHASE INFO ---------*/
+#carrito .carrito-purchase span.carrito-id-label,
+#carrito .carrito-purchase span.carrito-seller-label{
+	background: #3B3B3B;
+	color: #fff;
+	padding: 10px;
+	border-radius: 5px 0 0 5px;
+	margin-left: 15px;
+	font-weight: 500;
+}
+
+#carrito .carrito-purchase span.carrito-id-text,
+#carrito .carrito-purchase a.carrito-seller-text{
+	background: #686868;
+	color: #fff;
+	padding: 10px;
+	border-radius: 0 5px 5px 0;
+	text-align: left;
+	text-decoration: none;
+}
+
+#carrito .carrito-purchase span.carrito-id-text:hover,
+#carrito .carrito-purchase a.carrito-seller-text:hover{
+	background: #4B4A4A;
+}
+
+/*-------------- TABlA -----*/
+#carrito-tabla{
+	margin-top: 5px;
+	margin-top: 0;
+	margin-bottom: 1px;
+}
+
+#carrito-tabla th{
+	border-top: 0;
+}
+
+#carrito-tabla td{
+	text-align: center;
+}
+
+#carrito-tabla td.title{
+	font-weight: 500;
+}
+
+#carrito-tabla td.subtotal,
+#carrito-tabla th.total{
+	text-align: right;
+}
+
+/*-------- CARRITO FINALIZE ----------*/
+div.carrito-finalize div{
+	min-width: 100px;
+	max-width: 100px;
+}

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Intro a bootstrap</title>
+
+		<!-- META INFO-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		<!-- PLUG-IN -->
+		<link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+		
+
+		<!-- FUENTES -->
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+
+		<!-- ESTILOS EXTERNOS -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<link rel="stylesheet" type="text/css" href="css/producto.css">
+
+		<!-- ESTILOS INTERNOS -->
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="row justify-content-between">
+					<!-- LOGO -->
+					<div class="col-1 d-flex justify-content-center">
+						<a href="index.html">
+							<div class="foto d-flex align-items-center justify-content-center">			
+								<img src="img/logo1.png">
+							</div>
+						</a>
+					</div>
+
+					<!-- BUSQUEDA -->
+					<div class="col-6 d-flex align-items-center justify-content-center p-0">
+						<form class="form-row w-100">
+							<div class="col-12">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<select class="custom-select  btn btn-warning bg-warning">
+											<option selected>Todo</option>
+											<option disabled="">--Monstruos--</option>
+											<option value="0">Mn. Todo</option>
+											<option value="1">Normales</option>
+											<option value="2">Efecto</option>
+											<option value="3">Fusión</option>
+											<option value="4">Ritual</option>
+											<option value="5">XYZ</option>
+											<option value="6">Synchro</option>
+											<option value="7">Péndulo</option>
+											<option value="8">Link</option>
+											<option disabled="">--Magia--</option>
+											<option value="9">Mg. Todo</option>
+											<option value="10">Mg. Normal</option>
+											<option value="11">Mg. Rápido</option>
+											<option value="12">Mg. Continua</option>
+											<option value="13">Mg. Campo</option>
+											<option value="14">Mg. Equipo</option>
+											<option value="15">Mg. Ritual</option>
+											<option disabled="">--Trampa--</option>
+											<option value="16">T. Todo</option>
+											<option value="17">T. Normal</option>
+											<option value="18">T. Continua</option>
+											<option value="19">T. Counter</option>
+											<option disabled="">--Otros--</option>
+											<option value="20">Sobres/Cajas</option>
+											<option value="21">Decks</option>
+											<option value="22">Tableros</option>
+											<option value="23">Estuches</option>
+										</select>
+									</div>
+									<input type="text" name="" placeholder="Buscar..." class="form-control">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+									</div>
+								</div>
+							</div>
+						</form>					
+					</div>
+
+					<!-- NAVEGACIÓN -->
+					<nav class="col-3" id="nav-menu">
+						<div class="row h-100">
+							<div class="col-6 p-0 d-flex justify-content-center btn-login" data-toggle="modal" data-target="#modal-login">
+								<!-- Contenido del botón Log In -->
+								<div class="row flex-column w-100 btn-login-body">
+									<div class="col d-flex justify-content-center btn-login-header">
+										<div class="btn-login-img-container d-flex align-items-center">
+											<img src="img/user1.jpg">
+										</div>
+									</div>
+									<div class="col d-flex justify-content-center btn-login-link">
+										<a href="#">Log In</a>
+									</div>
+								</div>
+							</div>
+							<!------ Carrito -------------->
+							<div class="col-6 d-flex align-items-center justify-content-center btn-cart">
+								<div class="dropdown dp-cart">
+									<i class="fas fa-shopping-cart fa-2x dropdown-toggle" id="dp-cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+									<div class="row dropdown-menu dropdown-menu-right px-2" aria-labelledby="dp-cart">
+										
+										<div class="col">
+											<table class="table table-bordered table-striped">
+												<thead class="thead-dark">
+												<tr>
+													<th scope="col"></th>
+													<th scope="col" colspan="2">Producto</th>
+													<th scope="col">Unidades</th>
+													<th scope="col">$</th>
+													<th scope="col">Eliminar</th>
+												</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr class="tr-total">
+														<td class="td-total-label">Total</td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td class="td-total">3000.00</td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="col">
+											<a class="btn btn-outline-success btn-block" href="perfil.html">Gestionar</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</nav>
+
+				</div>
+			</div>
+		</header>
+
+		<main>			
+			<div class="container w-100">
+				<!-- MODAL LOGIN -->
+				<div class="row">
+					<div class="col">
+						<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title" id="">Log In</h1>
+										<button class="close" data-dismiss="modal" aria-label="cerrar"><span aria-hidden="true">&times;</span></button>
+									</div>
+									<div class="modal-body">
+										<div class="container-fluid">
+											<form action="" class="form-row justify-content-center">
+												<div class="col-10 form-group">
+													<label for="login-id">Usuario</label>
+													<input type="text" name="" id="login-id" class="form-control" placeholder="Correo o Id">
+													<small id="login-id-help" class="form-text">Ingrese su id o su correo</small>
+												</div>
+												<div class="col-10 form-group">
+													<label for="login-password">Contraseña</label>
+													<input type="password" name="" id="login-password" class="form-control" placeholder="Contraseña">
+													<small id="login-password-help" class="form-text">Recuerde que su contraseña es encriptada y no podrá recuperarse</small>
+												</div>
+												<div class="col-10 form-group">
+													<a href="registro.html" style="text-decoration: none;">Crear una cuenta nueva</a>
+												</div>
+												<div class="col-10">
+													<button class="btn btn-success btn-block">Iniciar</button>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="modal-footer">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- MODAL MEDIOS DE PAGO -->
+				<div class="row">
+					<div class="col">
+						<div class="modal fade" id="modal-pagos" tabindex="-1" role="dialog" aria-labelledby="modal-pagos" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title">
+											<i class="fas fa-hand-holding-usd"></i>
+											Medios de pago
+										</h1>
+										<button class="close" data-dismiss="modal" aria-label="Cerrar">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+
+									<div class="modal-body">
+										<div class="container-fluid">
+											<div class="row">
+												<div class="col-12 credito">
+													<h3>Tárjetas de crédito</h3>
+													<i class="fab fa-cc-visa"></i>
+													<i class="fab fa-cc-mastercard"></i>
+													<i class="fab fa-cc-amex"></i>
+												</div>
+												<div class="col-12 debito">
+													<h3>Tárjetas de débito</h3>
+													<i class="fab fa-cc-visa"></i>
+													<i class="fab fa-cc-mastercard"></i>
+												</div>
+												<div class="col-12 deposito">
+													<h3>Depósito y transferencia bancaria</h3>
+													<img src="img/Bancomer_820x421.png" width="100px">
+													<img src="img/Banamex_800x190.png" width="100px">
+													<img src="img/Santander_1280x244.png" width="100px">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="modal-footer">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- MODAL DETALLES DEL PRODUCTO -->
+				<div class="row">
+					<div class="col">
+						<div class="modal fade bd-example-modal-lg" id="modal-detalles" tabindex="-1" role="dialog" aria-labelledby="modal-detalles" aria-hidden="true">
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title">
+											<i class="fas fa-info-circle"></i>
+											Detalles del producto
+										</h1>
+										<button class="close" data-dismiss="modal" aria-label="Cerrar">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+
+									<div class="modal-body">
+										<div class="container-fluid">
+											<div class="row">
+												<div class="col-6">
+													<p class="h5">Estado del producto</p>
+													<p>Nuevo</p>
+												</div>
+												<div class="col-6">
+													<p class="h5">Tipo de carta</p>
+													<p>Varios</p>
+												</div>
+												<div class="col-6">
+													<p class="h5">Tipo de producto</p>
+													<p>Deck</p>
+												</div>
+												<div class="col-6">
+													<p class="h5">Cantidad de cartas</p>
+													<p>60</p>
+												</div>
+											</div>
+											<div class="row justify-content-center">
+												<div class="col-10">
+													<p class="h5">Descripción</p>
+													<div>
+														<p class="modal-detalles-desc">
+															Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+															tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+															quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+															consequat.
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="modal-footer">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- MODAL DATOS DEL VENDEDOR -->
+				<div class="row">
+					<div class="col">
+						<div class="modal fade" id="modal-vendedor" tabindex="-1" role="dialog" aria-labelledby="modal-vendedor" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+
+									<div class="modal-header">
+										<h1 class="modal-title">
+											<i class="fas fa-user"></i>
+											Datos del vendedor
+										</h1>
+										<button class="close" data-dismiss="modal" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
+									</div>
+
+									<div class="modal-body">
+										<div class="container-fluid">
+											<div class="row justify-content-center">
+												<div class="col-6 modal-vendedor-nick">
+													<h3>Vendedor</h3>
+													<div class="nick-box-container">
+														<div class="icon"><i class="fas fa-user"></i></div>
+														<div class="nick"><a href="#">Joshi_Re</a></div>
+													</div>
+												</div>
+												<div class="col-6 modal-vendedor-avg">
+													<h3>Reputación</h3>
+													<div class="avg-box-container">
+														<div class="icon">
+															<i class="fas fa-thumbs-up"></i>
+														</div>
+														<div class="stars">
+															<i class="fas fa-star"></i>
+															<i class="fas fa-star"></i>
+															<i class="fas fa-star"></i>
+															<i class="fas fa-star"></i>
+															<i class="fas fa-star"></i>
+														</div>
+													</div>
+												</div>
+												<div class="col-10 modal-vendedor-loc mt-2">
+													<h3>Ubicación</h3>
+													<div class="loc-box-container">
+														<div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+														<div class="location">Villahermosa, Tab.</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="modal-footer">
+										
+									</div>
+
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+				<!-- SECCIÓN DEL PRODUCTO -->
+				<div class="row pt-2">
+					<!-- COLUMNA DE IMÁGENES -->
+					<div class="col-2 bg-dark pt-4 flex-column img-column-container">
+						<div class="col-12">
+							<button class="btn btn-dark">
+								<img src="img/bear.png" class="img-fluid">
+							</button>
+						</div>
+						<div class="col-12">
+							<button class="btn btn-dark">
+								<img src="img/img-1.jpg" class="img-fluid">
+							</button>
+						</div>
+						<div class="col-12">
+							<button class="btn btn-dark">
+								<img src="img/img-2.png" class="img-fluid">
+							</button>
+						</div>
+						<div class="col-12">
+							<button class="btn btn-dark">
+								<img src="img/img-3.jpg" class="img-fluid">
+							</button>
+						</div>
+						<div class="col-12">
+							<button class="btn btn-dark">
+								<img src="img/img-4.jpg" class="img-fluid">
+							</button>
+						</div>
+					</div>
+
+					<!-- DISPLAY DEL PRODUCTO -->
+					<div class="col-5 d-flex justify-content-center">
+						<div class="row product-container flex-column align-items-center">
+							<!-- Nombre del producto -->
+							<div class="product-item">
+								<div class="product-name d-flex align-items-center">
+									<p class="h4">
+										Fluffal Deck
+									</p>
+								</div>
+							</div>
+
+							<!-- Calificación del producto -->
+							<div class="product-item">
+								<div class="product-avg-container d-flex justify-content-end align-items-center">
+									<div class="product-avg-rank d-flex justify-content-center align-items-center rank-muted">
+										<i class="fas fa-star"></i>
+									</div>
+									<div class="product-avg-rank d-flex justify-content-center align-items-center rank-muted">
+										<i class="fas fa-star"></i>
+									</div>
+									<div class="product-avg-rank d-flex justify-content-center align-items-center">
+										<i class="fas fa-star"></i>
+									</div>
+									<div class="product-avg-rank d-flex justify-content-center align-items-center">
+										<i class="fas fa-star"></i>
+									</div>
+									<div class="product-avg-rank d-flex justify-content-center align-items-center">
+										<i class="fas fa-star"></i>
+									</div>
+								</div>
+							</div>
+
+							<!-- Imagen del producto -->
+							<div class="product-item">
+								<div class="product-img-container d-flex align-items-center">
+									<img src="img/bear.png">
+								</div>
+							</div>
+
+							<!-- Descripción del producto -->
+							<div class="product-item">
+								<div class="product-description">
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- INFORMACIÓN DEL PRODUCTO -->
+					<div class="col-5 d-flex justify-content-center">
+						<div class="card w-100 border-primary">
+							<div class="card-header">
+								<h3 class="card-title">Información del producto</h3>
+							</div>
+							<div class="card-body">
+								<!-- Precio -->
+								<div class="row justify-content-center info-row">
+									<div class="col-2 info-box-prepend">
+										<i class="fas fa-dollar-sign w-100"></i>
+									</div>
+									<div class="col-8 info-box-append">
+										<p class="info-price">1000.00</p>
+									</div>
+								</div>
+
+								<!-- Medios de pago -->
+								<div class="row justify-content-center info-row">
+									<div class="col-2 info-innerBox-prepend">
+										<i class="far fa-credit-card"></i>
+									</div>
+									<button class="col-8 info-button-append btn btn-dark" data-toggle="modal" data-target="#modal-pagos">
+										Medios de pago
+									</button>
+								</div>
+
+								<!-- Unidades del producto -->
+								<div class="row justify-content-center info-row">
+									<div class="col-2 info-innerBox-prepend">
+										<i class="fas fa-box-open"></i>
+									</div>
+									<button class="col-8 info-button-append btn btn-dark">
+										Unidades restantes
+										<span class="badge badge-light">5</span>
+									</button>
+								</div>
+
+								<!-- Detalles del producto -->
+								<div class="row info-row justify-content-center">
+									<div class="col-2 info-innerBox-prepend">
+										<i class="fas fa-shapes fa-flip-horizontal"></i>
+									</div>
+									<button class="col-8 info-button-append btn btn-dark" data-toggle="modal" data-target="#modal-detalles">
+										Detalles del producto
+									</button>
+								</div>
+
+								<!-- Datos del vendedor -->
+								<div class="row info-row justify-content-center">
+									<div class="col-2 info-innerBox-prepend">
+										<i class="fas fa-user"></i>
+									</div>
+									<button class="col-8 info-button-append btn btn-dark" data-toggle="modal" data-target="#modal-vendedor">
+										Datos del vendedor
+									</button>
+								</div>
+
+							</div>
+							<div class="card-footer d-flex justify-content-around">
+								<button class="btn btn-success">Comprar</button>
+								<button class="btn btn-outline-primary">Agregar al carrito</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- SECCIÓN DE COMENTARIOS -->
+				<div class="row justify-content-center py-3">
+					<!-- Comentar -->
+					<div class="col-10 py-1 px-0">
+						<form action="">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text">Deja un comentario</span>
+								</div>
+								<input type="text" name="" id="input-preguntar" class="form-control form-control-lg" minlength="5" maxlength="64">
+								<div class="input-group-append">
+									<button type="submit" class="btn btn-primary">Comentar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<!-- Lista de comentarios -->
+					<div class="col-10 pt-4">
+						<ul class="list-unstyled" id="coments-body">
+							<li class="media mb-4">
+								<img src="img/img-2.png" alt="user1" width="64px" class="mr-2">
+								<div class="media-body">
+									<h5>luigi5346</h5>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+
+									<ul class="list-unstyled">
+										<li class="media mt-2">
+											<img src="img/img-5.jpg" alt="user1" width="64px" class="mr-2">
+											<div class="media-body">
+											<h5>Krabs</h5>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+												tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="media mb-4">
+								<img src="img/img-1.jpg" alt="user1" width="64px" class="mr-2">
+								<div class="media-body">
+									<h5>Joshi_Re</h5>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</main>
+
+		<!-- SCRIPTS -->
+		<script type="text/javascript" src="Jquery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="Jquery/popper.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>

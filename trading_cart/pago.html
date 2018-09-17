@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Trading cart</title>
+
+		<!-- META INFO-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		<!-- PLUG-IN -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+
+		<!-- FUENTES -->
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+
+		<!-- ESTILOS -->
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<link rel="stylesheet" type="text/css" href="css/pago.css">
+
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="row justify-content-between">
+					<!-- LOGO -->
+					<div class="col-1 d-flex justify-content-center">
+						<a href="index.html">
+							<div class="foto d-flex align-items-center justify-content-center">			
+								<img src="img/logo1.png">
+							</div>
+						</a>
+					</div>
+
+					<!-- BUSQUEDA -->
+					<div class="col-6 d-flex align-items-center justify-content-center p-0">
+						<form class="form-row w-100">
+							<div class="col-12">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<select class="custom-select  btn btn-warning bg-warning">
+											<option selected>Todo</option>
+											<option disabled="">--Monstruos--</option>
+											<option value="0">Mn. Todo</option>
+											<option value="1">Normales</option>
+											<option value="2">Efecto</option>
+											<option value="3">Fusión</option>
+											<option value="4">Ritual</option>
+											<option value="5">XYZ</option>
+											<option value="6">Synchro</option>
+											<option value="7">Péndulo</option>
+											<option value="8">Link</option>
+											<option disabled="">--Magia--</option>
+											<option value="9">Mg. Todo</option>
+											<option value="10">Mg. Normal</option>
+											<option value="11">Mg. Rápido</option>
+											<option value="12">Mg. Continua</option>
+											<option value="13">Mg. Campo</option>
+											<option value="14">Mg. Equipo</option>
+											<option value="15">Mg. Ritual</option>
+											<option disabled="">--Trampa--</option>
+											<option value="16">T. Todo</option>
+											<option value="17">T. Normal</option>
+											<option value="18">T. Continua</option>
+											<option value="19">T. Counter</option>
+											<option disabled="">--Otros--</option>
+											<option value="20">Sobres/Cajas</option>
+											<option value="21">Decks</option>
+											<option value="22">Tableros</option>
+											<option value="23">Estuches</option>
+										</select>
+									</div>
+									<input type="text" name="" placeholder="Buscar..." class="form-control">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+									</div>
+								</div>
+							</div>
+						</form>					
+					</div>
+
+					<!-- NAVEGACIÓN -->
+					<nav class="col-3" id="nav-menu">
+						<div class="row h-100">
+							<div class="col-6 p-0 d-flex justify-content-center btn-login" data-toggle="modal" data-target="#modal-login">
+								<!-- Contenido del botón Log In -->
+								<div class="row flex-column w-100 btn-login-body">
+									<div class="col d-flex justify-content-center btn-login-header">
+										<div class="btn-login-img-container d-flex align-items-center">
+											<img src="img/user1.jpg">
+										</div>
+									</div>
+									<div class="col d-flex justify-content-center btn-login-link">
+										<a href="#">Log In</a>
+									</div>
+								</div>
+								<!------ Carrito -------------->
+							</div>
+							<div class="col-6 d-flex align-items-center justify-content-center btn-cart">
+								<div class="dropdown dp-cart">
+									<i class="fas fa-shopping-cart fa-2x dropdown-toggle" id="dp-cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+									<div class="row dropdown-menu dropdown-menu-right px-2" aria-labelledby="dp-cart">
+										
+										<div class="col">
+											<table class="table table-bordered table-striped">
+												<thead class="thead-dark">
+												<tr>
+													<th scope="col"></th>
+													<th scope="col" colspan="2">Producto</th>
+													<th scope="col">Unidades</th>
+													<th scope="col">$</th>
+													<th scope="col">Eliminar</th>
+												</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr class="tr-total">
+														<td class="td-total-label">Total</td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td class="td-total">3000.00</td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="col">
+											<button class="btn btn-outline-success btn-block">Gestionar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</nav>
+
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12" id="pago-title">
+						<p class="h1"><i class="fas fa-money-check-alt"></i>
+						Procesar pago</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-12 table-secondary">
+						<div class="accordion">
+
+							<!-- ARTÍCULOS -->
+							<div class="card">
+								<div class="card-header" id="tabla">
+									<button class="btn btn-link" data-toggle="collapse" data-target="#tabla-content" aria-expanded="false" aria-controls="tabla-content">
+										<p class="h2"><i class="fas fa-clipboard-check"></i> Revise sus artículos</p>
+									</button>
+								</div>
+
+								<div class="collapse" id="tabla-content" aria-labelledby="tabla" data-parent="#tabla">
+									<div class="card-body">
+										<table class="table">
+											<thead>
+												<tr>
+													<th scope="col">No.</th>
+													<th scope="col" colspan="2">Producto</th>
+													<th scope="col">Precio unitario</th>
+													<th scope="col">Unidades</th>
+													<th scope="col">Subtotal</th>
+													<th scope="col">Quitar</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">01</th>
+													<td><img src="img/madolche1.png" width="100px"></td>
+													<td>Madolche Cruffsant</td>
+													<td class="price">50.00</td>
+													<td>3 <button class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button> <button class="btn btn-warning btn-sm"><i class="fas fa-minus"></i></button></td>
+													<td class="subtotal">150.00</td>
+													<td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+												</tr>
+												<tr>
+													<th scope="row">02</th>
+													<td><img src="img/bear.png" width="100px"></td>
+													<td>Fluffal Deck</td>
+													<td class="price">1000.00</td>
+													<td>1 <button class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button> <button class="btn btn-warning btn-sm"><i class="fas fa-minus"></i></button></td>
+													<td class="subtotal">1000.00</td>
+													<td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+												</tr>
+											</tbody>
+											<thead>
+												<tr>
+													<th scope="col">Total</th>
+													<th scope="col" colspan="4"></th>
+													<th scope="col" class="total">$1150.00</th>
+													<th scope="col"></th>
+												</tr>
+											</thead>
+										</table>
+									</div>
+								</div>
+							</div>
+
+							<!-- DIRECCIÓN DE ENVÍO -->
+							<div class="card">
+								<div class="card-header" id="direccion">
+									<button class="btn btn-link" data-toggle="collapse" data-target="#direccion-content" aria-expanded="false" aria-controls="direccion-content">
+										<p class="h2"><i class="fas fa-map-marker-alt"></i> Ingrese su dirección</p>
+									</button>
+								</div>
+
+								<div class="collapse" id="direccion-content" aria-labelledby="direccion" data-parent="#direccion">
+									<div class="card-body">
+										<div class="container-fluid">
+											<div class="form-row form-group">
+												<div class="col-6">
+													<div class="input-group">
+														<div class="input-group-prepend">
+															<span class="input-group-text">Calle</span>
+														</div>
+														<input type="text" name="" class="form-control" maxlength="32" placeholder="Ej. Carlos B. Zetina" required="">
+													</div>
+												</div>
+												<div class="col-6">
+													<div class="input-group">
+														<div class="input-group-prepend">
+															<span class="input-group-text">Colonia</span>
+														</div>
+														<input type="text" name="" class="form-control" maxlength="32" placeholder="Ej. Hipódromo condesa">
+													</div>
+												</div>
+											</div>
+											<div class="form-row form-group">
+												<div class="col-6">
+													<div class="input-group">
+														<div class="input-group-prepend">
+															<span class="input-group-text">No. Ext.</span>
+														</div>
+														<input type="text" name="" class="form-control" maxlength="24" placeholder="Ej. 33">
+													</div>
+												</div>
+												<div class="col-6">
+													<div class="input-group">
+														<div class="input-group-prepend">
+															<span class="input-group-text">No. Int</span>
+														</div>
+														<input type="text" name="" class="form-control" maxlength="32" placeholder="Ej. Depto. B-202">
+													</div>
+												</div>
+											</div>
+											<div class="form-row form-group">
+												<div class="col-6">
+													<div class="input-group">
+														<div class="input-group-prepend">
+															<span class="input-group-text">Ciudad</span>
+														</div>
+														<input type="text" name="" class="form-control" maxlength="32" placeholder="Ej. Ciudad de México">
+													</div>
+												</div>
+												<div class="col-6">
+													<div class="input-group">
+														<div class="input-group-prepend">
+															<span class="input-group-text">Estado</span>
+														</div>
+														<input type="text" name="" class="form-control" maxlength="32" placeholder="D.F">
+													</div>
+												</div>
+											</div>
+											<div class="form-row form-group zipcode">
+												<div class="col-6">
+													<div class="input-group">
+														<div class="input-group-prepend">
+															<span class="input-group-text">C.P</span>
+														</div>
+														<input type="number" name="" class="form-control" maxlength="16" placeholder="06170">
+													</div>
+												</div>
+												<div class="col-6">
+													
+												</div>
+											</div>
+											<div class="form-row form-group tel">
+												<div class="col-6">
+													<div class="input-group">
+														<div class="input-group-prepend">
+															<span class="input-group-text">Tel 1</span>
+														</div>
+														<input type="number" name="" class="form-control" maxlength="16" placeholder="9933949468">
+													</div>
+												</div>
+												<div class="col-6">
+													<div class="input-group">
+														<div class="input-group-prepend">
+															<span class="input-group-text">Tel 2</span>
+														</div>
+														<input type="number" name="" class="form-control" maxlength="16" placeholder="9933949468">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- FORMA DE PAGO -->
+							<div class="card">
+								<div class="card-header" id="pago">
+									<button class="btn btn-link" data-toggle="collapse" data-target="#pago-content" aria-expanded="false" aria-controls="pago-content">
+										<p class="h2"><i class="fas fa-money-bill"></i> Forma de pago</p>
+									</button>
+								</div>
+
+								<div class="collapse show" id="pago-content" aria-labelledby="pago" data-parent="#pago">
+									<div class="card-body">
+										<div class="container-fluid">
+											<form>
+												<div class="row justify-content-around bg-secondary text-light">
+													<div class="custom-control custom-radio custom-control-inline">
+														<input type="radio" id="credito" name="forma-pago" class="custom-control-input" data-toggle="collapse" data-target="#credito-form" aria-expanded="false" aria-controls="credito-form">
+														<label class="custom-control-label" for="credito">Crédito</label>
+													</div>
+													<div class="custom-control custom-radio custom-control-inline">
+														<input type="radio" id="debito" name="forma-pago" class="custom-control-input" data-toggle="collapse" data-target="#debito-form" aria-expanded="false" aria-controls="debito-form">
+														<label class="custom-control-label" for="debito">Débito</label>
+													</div>
+													<div class="custom-control custom-radio custom-control-inline">
+														<input type="radio" id="deposito" name="forma-pago" class="custom-control-input" data-toggle="collapse" data-target="#deposito-form" aria-expanded="false" aria-controls="deposito-form">
+														<label class="custom-control-label" for="deposito">Depósito/Transferencia</label>
+													</div>
+												</div>
+												<div class="row table-secondary" id="credito-row">
+													<!-- Formulario de pago con crédito -->
+													<div class="col-12 collapse show" id="credito-form" aria-labelledby="credito debito" data-parent="#credito-row">
+														<!---->
+														<div class="form-row form-group">
+															<div class="col-2 emisora">
+																<p class="h4">Emisora:</p>
+															</div>
+															<div class="col d-flex justify-content-around">
+																<div class="custom-control custom-radio custom-control-inline">
+																	<input type="radio" id="credito-visa" name="emisora-credito" class="custom-control-input">
+																	<label class="custom-control-label" for="credito-visa"><i class="fab fa-cc-visa fa-2x"></i></label>
+																</div>
+																<div class="custom-control custom-radio custom-control-inline">
+																	<input type="radio" id="credito-mastercard" name="emisora-credito" class="custom-control-input">
+																	<label class="custom-control-label" for="credito-mastercard"><i class="fab fa-cc-mastercard fa-2x"></i></label>
+																</div>
+																<div class="custom-control custom-radio custom-control-inline">
+																	<input type="radio" id="credito-american" name="emisora-credito" class="custom-control-input">
+																	<label class="custom-control-label" for="credito-american"><i class="fab fa-cc-amex fa-2x"></i></label>
+																</div>
+															</div>
+														</div>
+
+														<div class="form-row form-group">
+															<div class="col-12">
+																Ingrese los 16 dígitos de su tarjeta
+															</div>
+															<div class="col-1" id="credito-numero">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="4" size="4">
+															</div>
+															<div class="col-1">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="4">
+															</div>
+															<div class="col-1">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="4">
+															</div>
+															<div class="col-1">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="4">
+															</div>
+														</div>
+
+														<div class="form-row form-group">
+															<div class="col-12">
+																Fecha de vencimiento (en 2 dígitos del mes, en 2 dígitos del año)
+															</div>
+															<div class="col-1" id="credito-fecha">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="2">
+															</div>
+															<div class="col-1">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="2">
+															</div>
+														</div>
+
+														<div class="form-row form-group">
+															<div class="col-12">
+																Código de seguridad (son los 3 últimos dígitos al reverso de su tarjeta)
+															</div>
+															<div class="col-1" id="credito-seguridad">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="3">
+															</div>
+															<div class="col-1">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="3">
+															</div>
+														</div>
+
+														<div class="form-row form-group">
+															<div class="col-12">
+																Títular (su nombre tal cual aparece en el plástico)
+															</div>
+															<div class="col-8" id="credito-titular">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="64">
+															</div>
+														</div>
+
+														<div class="form-row form-group justify-content-center">
+															<div class="col-auto">
+																<button class="btn btn-success btn-lg">Finalizar compra</button>
+															</div>
+														</div>
+														<!---->
+													</div>
+
+													<!-- Formulario de pago con débito -->
+													<div class="col-12 collapse" id="debito-form" aria-labelledby="debito" data-parent="#credito-row">
+														<!---->
+
+														<div class="form-row form-group">
+															<div class="col-2 emisora">
+																<p class="h4">Emisora:</p>
+															</div>
+															<div class="col d-flex justify-content-around">
+																<div class="custom-control custom-radio custom-control-inline">
+																	<input type="radio" id="debito-visa" name="emisora-debito" class="custom-control-input">
+																	<label class="custom-control-label" for="debito-visa"><i class="fab fa-cc-visa fa-2x"></i></label>
+																</div>
+																<div class="custom-control custom-radio custom-control-inline">
+																	<input type="radio" id="debito-mastercard" name="emisora-debito" class="custom-control-input">
+																	<label class="custom-control-label" for="debito-mastercard"><i class="fab fa-cc-mastercard fa-2x"></i></label>
+																</div>
+															</div>
+														</div>
+
+														<div class="form-row form-group">
+															<div class="col-12">
+																Ingrese los 16 dígitos de su tarjeta
+															</div>
+															<div class="col-1" id="debito-numero">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="4" size="4">
+															</div>
+															<div class="col-1">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="4">
+															</div>
+															<div class="col-1">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="4">
+															</div>
+															<div class="col-1">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="4">
+															</div>
+														</div>
+
+														<div class="form-row form-group">
+															<div class="col-12">
+																Fecha de vencimiento (en 2 dígitos del mes, en 2 dígitos del año)
+															</div>
+															<div class="col-1" id="debito-fecha">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="2">
+															</div>
+															<div class="col-1">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="2">
+															</div>
+														</div>
+
+														<div class="form-row form-group">
+															<div class="col-12">
+																Código de seguridad (son los 3 últimos dígitos al reverso de su tarjeta)
+															</div>
+															<div class="col-1" id="debito-seguridad">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="3">
+															</div>
+															<div class="col-1">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="3">
+															</div>
+														</div>
+
+														<div class="form-row form-group">
+															<div class="col-12">
+																Títular (su nombre tal cual aparece en el plástico)
+															</div>
+															<div class="col-8" id="debito-titular">
+																<input type="text" name="" class="form-control form-control-sm" maxlength="64">
+															</div>
+														</div>
+
+														<div class="form-row form-group justify-content-center">
+															<div class="col-auto">
+																<button class="btn btn-success btn-lg">Finalizar compra</button>
+															</div>
+														</div>
+
+														<!---->
+													</div>
+
+													<!-- Pago con transferencia -->
+													<div class="col-12 collapse" id="deposito-form" aria-labelledby="deposito" data-parent="#credito-row">
+														<!---->
+														<div class="row">
+															<div class="col-12">
+																Realice la transferencia del monto total a una de las siguientes cuentas.
+															</div>
+															<div class="col-2">
+																<img src="img/Banamex_800x190.png" width="100px">
+															</div>
+															<div class="col-4">
+																xxxx-xxxx-xxxx-xxxx
+															</div>
+															<div class="col-2">
+																<img src="img/Santander_1280x244.png" width="100px">
+															</div>
+															<div class="col-4">
+																xxxx-xxxx-xxxx-xxxx
+															</div>
+															<div class="col-2">
+																<img src="img/Bancomer_820x421.png" width="100px">
+															</div>
+															<div class="col-4">
+																xxxx-xxxx-xxxx-xxxx
+															</div>
+														</div>
+
+														<div class="form-row form-group justify-content-center">
+															<div class="col-auto">
+																<button class="btn btn-success btn-lg">Finalizar compra</button>
+															</div>
+														</div>
+														<!---->
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- MODALES -->
+			<div class="container">
+				<!-- MODAL LOGIN -->
+				<div class="row">
+					<div class="col">
+						<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title" id="">Log In</h1>
+										<button class="close" data-dismiss="modal" aria-label="cerrar"><span aria-hidden="true">&times;</span></button>
+									</div>
+									<div class="modal-body">
+										<div class="container-fluid">
+											<form action="" class="form-row justify-content-center">
+												<div class="col-10 form-group">
+													<label for="login-id">Usuario</label>
+													<input type="text" name="" id="login-id" class="form-control" placeholder="Correo o Id">
+													<small id="login-id-help" class="form-text">Ingrese su id o su correo</small>
+												</div>
+												<div class="col-10 form-group">
+													<label for="login-password">Contraseña</label>
+													<input type="password" name="" id="login-password" class="form-control" placeholder="Contraseña">
+													<small id="login-password-help" class="form-text">Recuerde que su contraseña es encriptada y no podrá recuperarse</small>
+												</div>
+												<div class="col-10 form-group">
+													<a href="registro.html" style="text-decoration: none;">Crear una cuenta nueva</a>
+												</div>
+												<div class="col-10">
+													<button class="btn btn-success btn-block">Iniciar</button>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="modal-footer">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- SCRIPTS -->
+		<script type="text/javascript" src="fontawesome-free/js/all.min.js"></script>
+		<script type="text/javascript" src="Jquery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="Jquery/popper.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>

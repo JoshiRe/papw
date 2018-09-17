@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Trading cart</title>
+
+		<!-- META INFO-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		<!-- PLUG-IN -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+
+		<!-- FUENTES -->
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+
+		<!-- ESTILOS -->
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="row justify-content-between">
+					<!-- LOGO -->
+					<div class="col-1 d-flex justify-content-center">
+						<a href="index.html">
+							<div class="foto d-flex align-items-center justify-content-center">			
+								<img src="img/logo1.png">
+							</div>
+						</a>
+					</div>
+
+					<!-- BUSQUEDA -->
+					<div class="col-6 d-flex align-items-center justify-content-center p-0">
+						<form class="form-row w-100">
+							<div class="col-12">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<select class="custom-select  btn btn-warning bg-warning">
+											<option selected>Todo</option>
+											<option disabled="">--Monstruos--</option>
+											<option value="0">Mn. Todo</option>
+											<option value="1">Normales</option>
+											<option value="2">Efecto</option>
+											<option value="3">Fusión</option>
+											<option value="4">Ritual</option>
+											<option value="5">XYZ</option>
+											<option value="6">Synchro</option>
+											<option value="7">Péndulo</option>
+											<option value="8">Link</option>
+											<option disabled="">--Magia--</option>
+											<option value="9">Mg. Todo</option>
+											<option value="10">Mg. Normal</option>
+											<option value="11">Mg. Rápido</option>
+											<option value="12">Mg. Continua</option>
+											<option value="13">Mg. Campo</option>
+											<option value="14">Mg. Equipo</option>
+											<option value="15">Mg. Ritual</option>
+											<option disabled="">--Trampa--</option>
+											<option value="16">T. Todo</option>
+											<option value="17">T. Normal</option>
+											<option value="18">T. Continua</option>
+											<option value="19">T. Counter</option>
+											<option disabled="">--Otros--</option>
+											<option value="20">Sobres/Cajas</option>
+											<option value="21">Decks</option>
+											<option value="22">Tableros</option>
+											<option value="23">Estuches</option>
+										</select>
+									</div>
+									<input type="text" name="" placeholder="Buscar..." class="form-control">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+									</div>
+								</div>
+							</div>
+						</form>					
+					</div>
+
+					<!-- NAVEGACIÓN -->
+					<nav class="col-3" id="nav-menu">
+						<div class="row h-100">
+							<div class="col-6 p-0 d-flex justify-content-center btn-login" data-toggle="modal" data-target="#modal-login">
+								<!-- Contenido del botón Log In -->
+								<div class="row flex-column w-100 btn-login-body">
+									<div class="col d-flex justify-content-center btn-login-header">
+										<div class="btn-login-img-container d-flex align-items-center">
+											<img src="img/user1.jpg">
+										</div>
+									</div>
+									<div class="col d-flex justify-content-center btn-login-link">
+										<a href="#">Log In</a>
+									</div>
+								</div>
+								<!------ Carrito -------------->
+							</div>
+							<div class="col-6 d-flex align-items-center justify-content-center btn-cart">
+								<div class="dropdown dp-cart">
+									<i class="fas fa-shopping-cart fa-2x dropdown-toggle" id="dp-cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+									<div class="row dropdown-menu dropdown-menu-right px-2" aria-labelledby="dp-cart">
+										
+										<div class="col">
+											<table class="table table-bordered table-striped">
+												<thead class="thead-dark">
+												<tr>
+													<th scope="col"></th>
+													<th scope="col" colspan="2">Producto</th>
+													<th scope="col">Unidades</th>
+													<th scope="col">$</th>
+													<th scope="col">Eliminar</th>
+												</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td class="td-img"><img src="img/bear.png" align="img" width="50px"></td>
+														<td class="td-nombre"><a href="#">Fluffal deck</a></td>
+														<td class="td-unidades">1</td>
+														<td class="td-subtotal">1000.00</td>
+														<td class="td-borrar"><button class="btn btn-warning"><i class="fas fa-trash"></i></button></td>
+													</tr>
+													<tr class="tr-total">
+														<td class="td-total-label">Total</td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td class="td-total">3000.00</td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="col">
+											<button class="btn btn-outline-success btn-block">Gestionar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</nav>
+
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div class="container">
+				<!-- MODAL LOGIN -->
+				<div class="row">
+					<div class="col">
+						<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title" id="">Log In</h1>
+										<button class="close" data-dismiss="modal" aria-label="cerrar"><span aria-hidden="true">&times;</span></button>
+									</div>
+									<div class="modal-body">
+										<div class="container-fluid">
+											<form action="" class="form-row justify-content-center">
+												<div class="col-10 form-group">
+													<label for="login-id">Usuario</label>
+													<input type="text" name="" id="login-id" class="form-control" placeholder="Correo o Id">
+													<small id="login-id-help" class="form-text">Ingrese su id o su correo</small>
+												</div>
+												<div class="col-10 form-group">
+													<label for="login-password">Contraseña</label>
+													<input type="password" name="" id="login-password" class="form-control" placeholder="Contraseña">
+													<small id="login-password-help" class="form-text">Recuerde que su contraseña es encriptada y no podrá recuperarse</small>
+												</div>
+												<div class="col-10 form-group">
+													<a href="registro.html" style="text-decoration: none;">Crear una cuenta nueva</a>
+												</div>
+												<div class="col-10">
+													<button class="btn btn-success btn-block">Iniciar</button>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="modal-footer">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- PRINCIPAL -->
+				<div class="row " data-criterion-no="0">
+					<div class="col-12 criterion-title">
+						<h2>Lo  Más Vendido</h2>
+					</div>
+					<div class="col-12 criterion-items-container">
+						<div class="criterion-item">
+							<a href="producto.html" class="">
+								<div class="row product-container flex-column align-items-center">
+									<!-- Nombre del producto -->
+									<div class="product-item">
+										<div class="product-name d-flex align-items-center">
+											<p class="h4">
+												Fluffal Deck
+											</p>
+										</div>
+									</div>
+
+									<!-- Imagen del producto -->
+									<div class="product-item">
+										<div class="product-img-container d-flex align-items-center">
+											<img src="img/bear.png">
+										</div>
+									</div>
+
+									<!-- Descripción del producto -->
+									<div class="product-item">
+										<div class="product-description">
+											<span class="icon"><i class="fas fa-dollar-sign"></i></span>
+											<span class="price">1000.00</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div class="criterion-item">
+							<a href="producto.html" class="">
+								<div class="row product-container flex-column align-items-center">
+									<!-- Nombre del producto -->
+									<div class="product-item">
+										<div class="product-name d-flex align-items-center">
+											<p class="h4">
+												Fluffal Deck
+											</p>
+										</div>
+									</div>
+
+									<!-- Imagen del producto -->
+									<div class="product-item">
+										<div class="product-img-container d-flex align-items-center">
+											<img src="img/bear.png">
+										</div>
+									</div>
+
+									<!-- Descripción del producto -->
+									<div class="product-item">
+										<div class="product-description">
+											<span class="icon"><i class="fas fa-dollar-sign"></i></span>
+											<span class="price">1000.00</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div class="criterion-item">
+							<a href="producto.html" class="">
+								<div class="row product-container flex-column align-items-center">
+									<!-- Nombre del producto -->
+									<div class="product-item">
+										<div class="product-name d-flex align-items-center">
+											<p class="h4">
+												Fluffal Deck
+											</p>
+										</div>
+									</div>
+
+									<!-- Imagen del producto -->
+									<div class="product-item">
+										<div class="product-img-container d-flex align-items-center">
+											<img src="img/bear.png">
+										</div>
+									</div>
+
+									<!-- Descripción del producto -->
+									<div class="product-item">
+										<div class="product-description">
+											<span class="icon"><i class="fas fa-dollar-sign"></i></span>
+											<span class="price">1000.00</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="row" data-criterion-no="1">
+					<div class="col-12 criterion-title">
+						<h2>Lo Más Nuevo</h2>
+					</div>
+					<div class="col-12 criterion-items-container">
+						<div class="criterion-item">
+							<a href="producto.html" class="">
+								<div class="row product-container flex-column align-items-center">
+									<!-- Nombre del producto -->
+									<div class="product-item">
+										<div class="product-name d-flex align-items-center">
+											<p class="h4">
+												Fluffal Deck
+											</p>
+										</div>
+									</div>
+
+									<!-- Imagen del producto -->
+									<div class="product-item">
+										<div class="product-img-container d-flex align-items-center">
+											<img src="img/bear.png">
+										</div>
+									</div>
+
+									<!-- Descripción del producto -->
+									<div class="product-item">
+										<div class="product-description">
+											<span class="icon"><i class="fas fa-dollar-sign"></i></span>
+											<span class="price">1000.00</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div class="criterion-item">
+							<a href="producto.html" class="">
+								<div class="row product-container flex-column align-items-center">
+									<!-- Nombre del producto -->
+									<div class="product-item">
+										<div class="product-name d-flex align-items-center">
+											<p class="h4">
+												Fluffal Deck
+											</p>
+										</div>
+									</div>
+
+									<!-- Imagen del producto -->
+									<div class="product-item">
+										<div class="product-img-container d-flex align-items-center">
+											<img src="img/bear.png">
+										</div>
+									</div>
+
+									<!-- Descripción del producto -->
+									<div class="product-item">
+										<div class="product-description">
+											<span class="icon"><i class="fas fa-dollar-sign"></i></span>
+											<span class="price">1000.00</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div class="criterion-item">
+							<a href="producto.html" class="">
+								<div class="row product-container flex-column align-items-center">
+									<!-- Nombre del producto -->
+									<div class="product-item">
+										<div class="product-name d-flex align-items-center">
+											<p class="h4">
+												Fluffal Deck
+											</p>
+										</div>
+									</div>
+
+									<!-- Imagen del producto -->
+									<div class="product-item">
+										<div class="product-img-container d-flex align-items-center">
+											<img src="img/bear.png">
+										</div>
+									</div>
+
+									<!-- Descripción del producto -->
+									<div class="product-item">
+										<div class="product-description">
+											<span class="icon"><i class="fas fa-dollar-sign"></i></span>
+											<span class="price">1000.00</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="row " data-criterion-no="2">
+					<div class="col-12 criterion-title">
+						<h2>Decks</h2>
+					</div>
+					<div class="col-12 criterion-items-container">
+						<div class="criterion-item">
+							<a href="producto.html" class="">
+								<div class="row product-container flex-column align-items-center">
+									<!-- Nombre del producto -->
+									<div class="product-item">
+										<div class="product-name d-flex align-items-center">
+											<p class="h4">
+												Fluffal Deck
+											</p>
+										</div>
+									</div>
+
+									<!-- Imagen del producto -->
+									<div class="product-item">
+										<div class="product-img-container d-flex align-items-center">
+											<img src="img/bear.png">
+										</div>
+									</div>
+
+									<!-- Descripción del producto -->
+									<div class="product-item">
+										<div class="product-description">
+											<span class="icon"><i class="fas fa-dollar-sign"></i></span>
+											<span class="price">1000.00</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div class="criterion-item">
+							<a href="producto.html" class="">
+								<div class="row product-container flex-column align-items-center">
+									<!-- Nombre del producto -->
+									<div class="product-item">
+										<div class="product-name d-flex align-items-center">
+											<p class="h4">
+												Fluffal Deck
+											</p>
+										</div>
+									</div>
+
+									<!-- Imagen del producto -->
+									<div class="product-item">
+										<div class="product-img-container d-flex align-items-center">
+											<img src="img/bear.png">
+										</div>
+									</div>
+
+									<!-- Descripción del producto -->
+									<div class="product-item">
+										<div class="product-description">
+											<span class="icon"><i class="fas fa-dollar-sign"></i></span>
+											<span class="price">1000.00</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div class="criterion-item">
+							<a href="producto.html" class="">
+								<div class="row product-container flex-column align-items-center">
+									<!-- Nombre del producto -->
+									<div class="product-item">
+										<div class="product-name d-flex align-items-center">
+											<p class="h4">
+												Fluffal Deck
+											</p>
+										</div>
+									</div>
+
+									<!-- Imagen del producto -->
+									<div class="product-item">
+										<div class="product-img-container d-flex align-items-center">
+											<img src="img/bear.png">
+										</div>
+									</div>
+
+									<!-- Descripción del producto -->
+									<div class="product-item">
+										<div class="product-description">
+											<span class="icon"><i class="fas fa-dollar-sign"></i></span>
+											<span class="price">1000.00</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- SCRIPTS -->
+		<script type="text/javascript" src="Jquery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="Jquery/popper.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>

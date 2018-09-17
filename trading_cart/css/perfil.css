@@ -1,0 +1,94 @@
+main div.perfil{
+	--scale: 2.2;
+	--cover-w: 1500px;
+	--cover-h: 500px;
+	--perfil-ms: 200px;
+}
+
+/*--------------- IMAGEN DE PERFIL -----------------*/
+main div.perfil-username{
+	background: #fff;
+	padding: 10px;
+	font-weight: 500;
+	font-size: 25px;
+	text-align: center;
+}
+
+main div.perfil a.perfil-col{
+	cursor: pointer;
+}
+
+main div#perfil a#perfil-col:hover{
+	background: #000;
+}
+
+main .perfil-img-container{
+	min-width: var(--perfil-ms);
+	max-width: var(--perfil-ms);
+	max-height: var(--perfil-ms);
+	min-height: var(--perfil-ms);
+	display: flex;
+	align-items: center;
+	background: #000;
+	border-radius: 100px;
+	overflow: hidden;
+}
+
+main .perfil-img-container img{
+	width: 150%;
+}
+
+/*--------------- IMAGEN DE PORTADA -----------------*/
+main .perfil-coverimg-col{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main .perfil-coverimg-container{
+	background: #000;
+	min-width: calc(var(--cover-w) / var(--scale));
+	max-width: calc(var(--cover-w) / var(--scale));
+	min-height: calc(var(--cover-h) / var(--scale));
+	max-height: calc(var(--cover-h) / var(--scale));
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+main .perfil-coverimg-container img{
+	width: 100%;
+
+}
+
+/*--------------- NAVEGACIÓN -----------------*/
+main #perfil-nav-col{
+	padding: 0;
+	min-height: 100vh;
+}
+
+main nav#perfil-nav-items span{
+	display: block;
+	border-bottom: 1px solid #fff;
+	padding: 15px;
+}
+
+main nav#perfil-nav-items span:hover{
+	display: block;
+	background: #000;
+	border-bottom: 1px solid #fff;
+	padding: 15px;
+	cursor: pointer;
+}
+
+main nav#perfil-nav-items span a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+main nav#perfil-nav-items span i{
+	margin-right: 10px;
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Intro a bootstrap</title>
+
+		<!-- META INFO-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		<!-- PLUG-IN -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+
+		<!-- FUENTES -->
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+
+		<!-- ESTILOS -->
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<link rel="stylesheet" type="text/css" href="css/registro.css">
+
+		<!-- Scripts -->
+
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="row justify-content-between">
+					<!-- LOGO -->
+					<div class="col-1 d-flex justify-content-center">
+						<a href="index.html">
+							<div class="foto d-flex align-items-center justify-content-center">			
+								<img src="img/logo1.png">
+							</div>
+						</a>
+					</div>
+
+					<!-- BUSQUEDA -->
+					<div class="col-6 d-flex align-items-center justify-content-center p-0">
+						<form class="form-row w-100">
+							<div class="col-12">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<select class="custom-select  btn btn-warning bg-warning">
+											<option selected>Todo</option>
+											<option disabled="">--Monstruos--</option>
+											<option value="0">Mn. Todo</option>
+											<option value="1">Normales</option>
+											<option value="2">Efecto</option>
+											<option value="3">Fusión</option>
+											<option value="4">Ritual</option>
+											<option value="5">XYZ</option>
+											<option value="6">Synchro</option>
+											<option value="7">Péndulo</option>
+											<option value="8">Link</option>
+											<option disabled="">--Magia--</option>
+											<option value="9">Mg. Todo</option>
+											<option value="10">Mg. Normal</option>
+											<option value="11">Mg. Rápido</option>
+											<option value="12">Mg. Continua</option>
+											<option value="13">Mg. Campo</option>
+											<option value="14">Mg. Equipo</option>
+											<option value="15">Mg. Ritual</option>
+											<option disabled="">--Trampa--</option>
+											<option value="16">T. Todo</option>
+											<option value="17">T. Normal</option>
+											<option value="18">T. Continua</option>
+											<option value="19">T. Counter</option>
+											<option disabled="">--Otros--</option>
+											<option value="20">Sobres/Cajas</option>
+											<option value="21">Decks</option>
+											<option value="22">Tableros</option>
+											<option value="23">Estuches</option>
+										</select>
+									</div>
+									<input type="text" name="" placeholder="Buscar..." class="form-control">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+									</div>
+								</div>
+							</div>
+						</form>					
+					</div>
+
+					<!-- NAVEGACIÓN -->
+					<nav class="col-3">
+						<div class="row h-100">
+							<div class="col-6 p-0 d-flex justify-content-center btn-login" data-toggle="modal" data-target="#modal-login">
+								<!-- Contenido del botón Log In -->
+								<div class="row flex-column w-100 btn-login-body">
+									<div class="col d-flex justify-content-center btn-login-header">
+										<div class="btn-login-img-container d-flex align-items-center">
+											<img src="img/user1.jpg">
+										</div>
+									</div>
+									<div class="col d-flex justify-content-center btn-login-link">
+										<a href="#">Log In</a>
+									</div>
+								</div>
+								<!---------------------------------->
+							</div>
+							<div class="col-6 d-flex align-items-center justify-content-center btn-cart">
+								<i class="fas fa-shopping-cart fa-2x"></i>
+							</div>
+						</div>
+					</nav>
+
+				</div>
+			</div>
+		</header>
+
+		<main>			
+			<div class="container">
+				<!-- MODAL LOGIN -->
+				<div class="row">
+					<div class="col">
+						<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title" id="">Log In</h1>
+										<button class="close" data-dismiss="modal" aria-label="cerrar"><span aria-hidden="true">&times;</span></button>
+									</div>
+									<div class="modal-body">
+										<div class="container-fluid">
+											<form action="" class="form-row justify-content-center">
+												<div class="col-10 form-group">
+													<label for="login-id">Usuario</label>
+													<input type="text" name="" id="login-id" class="form-control" placeholder="Correo o Id">
+													<small id="login-id-help" class="form-text">Ingrese su id o su correo</small>
+												</div>
+												<div class="col-10 form-group">
+													<label for="login-password">Contraseña</label>
+													<input type="password" name="" id="login-password" class="form-control" placeholder="Contraseña">
+													<small id="login-password-help" class="form-text">Recuerde que su contraseña es encriptada y no podrá recuperarse</small>
+												</div>
+												<div class="col-10 form-group">
+													<a href="registro.html" style="text-decoration: none;">Crear una cuenta nueva</a>
+												</div>
+												<div class="col-10">
+													<button class="btn btn-success btn-block">Iniciar</button>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="modal-footer">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					<div class="col">
+						<h1 class="form-title1">¡Ingrese sus datos!</h1>
+					</div>
+				</div>
+				<!-- FORMULARIO -->
+				<form class="was-validated my-4" id="form-registro">
+					<!--Nombre-->
+					<div class="row justify-content-center form-group">
+						<div class="col-4">
+							<label for="registro-nombre">Nombre</label>
+							<input type="text" name="" id="registro-nombre" placeholder="Nombre" class="form-control" required="">
+							<small class="invalid-feedback">Campo obligatorio</small>
+							<small class="valid-feedback">Bien</small>
+						</div>
+						<div class="col-4">
+							<label for="registro-paterno">Apellido Paterno</label>
+							<input type="text" name="" id="registro-paterno" placeholder="Apellido paterno" class="form-control" required="">
+							<small class="invalid-feedback">Campo obligatorio</small>
+							<small class="valid-feedback">Bien</small>
+						</div>
+						<div class="col-4">
+							<label for="registro-materno">Apellido Materno</label>
+							<input type="text" name="" id="registro-materno" placeholder="Apellido materno" class="form-control" required="">
+							<small class="invalid-feedback">Campo obligatorio</small>
+							<small class="valid-feedback">Bien</small>
+						</div>
+					</div>
+
+					<!-- Fecha Nac, Sexo -->
+					<div class="row justify-content-start form-group">
+						<div class="col-4">
+							<label for="registro-fecha">Fecha Nacimiento</label>
+							<input type="date" name="" id="registro-fecha" class="form-control" required="">
+							<small class="invalid-feedback">Campo obligatorio</small>
+							<small class="valid-feedback">Bien</small>
+						</div>
+						<div class="col-4">
+							<label>Sexo</label>
+							<div class="custom-control custom-radio">
+								<input type="radio" name="registro-sexo" id="registro-sexo" class="custom-control-input" value="h" required="">
+								<label for="registro-sexo" class="custom-control-label">Hombre</label>
+							</div>
+							<div class="custom-control custom-radio">
+								<input type="radio" name="registro-sexo" id="registro-sexo2" class="custom-control-input" value="m" required="">
+								<label for="registro-sexo2" class="custom-control-label">Mujer</label>
+							</div>
+						</div>
+					</div>
+
+					<!-- Correo, teléfono -->
+					<div class="row justify-content-start form-group">
+						<div class="col-4">							
+							<label class="registro-correo">Correo</label>
+							<input type="email" name="" id="registro-correo" class="form-control" required="">
+							<small class="invalid-feedback">Campo obligatorio</small>
+							<small class="valid-feedback">Bien</small>
+						</div>
+						<div class="col-4">
+							<label for="registro-telefono">Teléfono</label>
+							<input type="text" name="" id="registro-telefono" class="form-control" required="">
+							<small class="invalid-feedback">Campo obligatorio</small>
+							<small class="valid-feedback">Bien</small>
+						</div>
+					</div>
+
+					<!-- Nick, contraseña, confirmar -->
+					<div class="row justify-content-center form-group">
+						<div class="col-4">
+							<label for="registro-nick">Nick</label>
+							<input type="text" name="" id="registro-nick" class="form-control" required="">
+							<small class="invalid-feedback">Campo obligatorio</small>
+							<small class="valid-feedback">Bien</small>
+						</div>
+						<div class="col-4">
+							<label for="registro-password">Contraseña</label>
+							<input type="password" name="" id="registro-password" class="form-control" required="">
+							<small class="invalid-feedback">Campo obligatorio</small>
+							<small class="valid-feedback">Bien</small>
+						</div>
+						<div class="col-4">
+							<label for="registro-password2">Confirme la contraseña</label>
+							<input type="password" name="" id="registro-password2" class="form-control">
+						</div>
+					</div>
+
+					<!-- Imagen perfil -->
+					<div class="row pl-3 pb-1 align-items-center form-group">
+						<div class="col-4 custom-file bg-warning">
+							<input type="file" name="" id="registro-foto1" class="custom-file-input" required="">
+							<label for="registro-foto1" class="custom-file-label">Imagen de perfil</label>
+							<small class="invalid-feedback">Campo obligatorio</small>
+							<small class="valid-feedback">Bien</small>
+						</div>
+						<div class="col-4">
+							<div class="img-container">
+								<img src="img/user1.jpg">
+							</div>
+						</div>
+					</div>
+
+					<!-- Imagen portada -->
+					<div class="row pl-3 align-items-center form-group">
+						<div class="col-4">
+							<input type="file" name="" id="registro-foto2" class="custom-file-input" required="">
+							<label for="registro-foto2" class="custom-file-label">Imagen de portada</label>
+							<small class="invalid-feedback">Campo obligatorio</small>
+							<small class="valid-feedback">Bien</small>
+						</div>
+						<div class="col-8">
+							<div class="img-container2">
+								<img src="img/tablero2.jpg">
+							</div>
+						</div>
+					</div>
+
+					<!-- Botón Submit -->
+					<div class="row justify-content-center">
+						<div class="col-4">
+							<button class="btn btn-success btn-lg btn-block" type="submit">Registrar</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</main>
+
+		<!-- SCRIPTS -->
+		<script type="text/javascript" src="Jquery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/registro.js"></script>
+		<script type="text/javascript" src="Jquery/popper.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>

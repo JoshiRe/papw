@@ -1,0 +1,54 @@
+#borradores p.h3{
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+/*---------- MODAL ENABLE POST -------------*/
+#modal-enablePost .modal-content{
+	background: #fff;
+}
+
+#modal-enablePost .modal-header{
+	background: #15B200;
+	color: #fff;
+}
+
+#modal-enablePost .modal-body{
+	background: #70E052;
+}
+
+#modal-enablePost .modal-body p.h4{
+	color: #000;
+}
+
+#modal-enablePost .modal-body small{
+	color: #616161;
+}
+
+#modal-enablePost .modal-body .btn-success,
+#modal-enablePost .modal-body .btn-default{
+	box-shadow: 0 0px 10px 1px #FFFFFF;
+}
+
+#modal-enablePost .modal-body .btn-success:hover,
+#modal-enablePost .modal-body .btn-default:hover{
+	box-shadow: 0 0px 10px 1px #C8C8C8;
+}
+
+/*-------------- TABlA -----*/
+#borradores-tabla{
+	margin-top: 5px;
+}
+
+#borradores-tabla th{
+	border-top: 0;
+}
+
+#borradores-tabla td{
+	text-align: center;
+}
+
+#borradores-tabla td[data-status="pending"]{
+	color: #DCBC09;
+	font-size: 35px;
+}
